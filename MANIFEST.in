@@ -1,0 +1,7 @@
+include dash_admin_components/dash_admin_components.min.js
+include dash_admin_components/dash_admin_components.dev.js
+include dash_admin_components/admindash.css
+include dash_admin_components/adminlte.css
+include dash_admin_components/metadata.json
+include dash_admin_components/package.json
+include README.md
