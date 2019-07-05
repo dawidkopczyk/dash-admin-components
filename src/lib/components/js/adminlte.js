@@ -189,20 +189,25 @@ var Layout = function ($) {
 
   var Selector = {
     HEADER: '.main-header',
-    SIDEBAR: '.main-sidebar .sidebar',
+    SIDEBAR: '.main-sidebar', // dash-admin-components hack (correction)
     CONTENT: '.content-wrapper',
     CONTENT_HEADER: '.content-header',
     WRAPPER: '.wrapper',
     CONTROL_SIDEBAR: '.control-sidebar',
     LAYOUT_FIXED: '.layout-fixed',
-    FOOTER: '.main-footer'
+    FOOTER: '.main-footer',
+	NAVBAR: '.main-header', // dash-admin-components hack 
+	SIDEBAR_TOGGLE: ".nav-item > a[data-widget='pushmenu']", // dash-admin-components hack 
+	CONTROLBAR_TOGGLE: ".nav-item > a[data-widget='control-sidebar']" // dash-admin-components hack 
   };
 
   var ClassName = {
     HOLD: 'hold-transition',
     SIDEBAR: 'main-sidebar',
-    LAYOUT_FIXED: 'layout-fixed'
-
+    LAYOUT_FIXED: 'layout-fixed',
+	NAVBAR_FIXED: 'fixed-top', // dash-admin-components hack
+	SIDEBAR_DISABLED: 'ml-0' // dash-admin-components hack
+	
     /**
      * Class Definition
      * ====================================================
@@ -224,17 +229,40 @@ var Layout = function ($) {
       var heights = {
         window: $(window).height(),
         header: $(Selector.HEADER).outerHeight(),
-		// Dash-Admin-Components hack 
-        footer: $(Selector.FOOTER).outerHeight() || 0,
+        footer: $(Selector.FOOTER).outerHeight() || 0, // dash-admin-components hack (correction)
         sidebar: $(Selector.SIDEBAR).height()
       };
       console.log(heights);
 
       var max = this._max(heights);
-
+	  // dash-admin-components hack 
+	  var disableSidebar = ($(Selector.SIDEBAR).css("display") == "none");
+	  var disableControlbar = ($(Selector.CONTROL_SIDEBAR).css("display") == "none");
+	  
       $(Selector.CONTENT).css('min-height', max - heights.header - heights.footer);
-      $(Selector.SIDEBAR).css('min-height', max - heights.header);
+	  $(Selector.SIDEBAR).css('min-height', max - heights.header);
+	  
+      // dash-admin-components hack 
+	  // when the navbar is fixed, set top margin of body
+	  if ($(Selector.NAVBAR).hasClass(ClassName.NAVBAR_FIXED)) {
+		$(Selector.CONTENT).css('margin-top', heights.header);  
+	  }
+	  
+	  // dash-admin-components hack 
+	  // when the sidebar is disabled, hide sidebar toggle and set margin left of body header and footer 
+	  if (disableSidebar) {
+		$(Selector.SIDEBAR_TOGGLE).css("visibility", "hidden");
+		$(Selector.CONTENT).addClass(ClassName.SIDEBAR_DISABLED);
+		$(Selector.HEADER).addClass(ClassName.SIDEBAR_DISABLED);
+		$(Selector.FOOTER).addClass(ClassName.SIDEBAR_DISABLED);
+	  }
 
+	  // dash-admin-components hack 
+	  // when the controlbar is disabled, hide controlbar toggle
+	  if (disableControlbar) {
+		$(Selector.CONTROLBAR_TOGGLE).hide()
+	  }
+	  
       if (!$('body').hasClass(ClassName.LAYOUT_FIXED)) {
         if (typeof $.fn.slimScroll !== 'undefined') {
           $(Selector.SIDEBAR).slimScroll({ destroy: true }).slimScroll({ height: max - heights.header });
@@ -250,8 +278,7 @@ var Layout = function ($) {
       // Enable transitions
       $('body').removeClass(ClassName.HOLD);
 
-	  // Dash-Admin-Components hack 
-	  $('body').addClass('sidebar-mini sidebar-open');
+	  $('body').addClass('sidebar-mini sidebar-open'); // dash-admin-components hack 
 	  
       // Activate layout height watcher
       this.fixLayoutHeight();
@@ -722,9 +749,11 @@ var Widget = function ($) {
         _this._parent.trigger("hidden.bs.collapse");
       });
 	  
+	  // dash-admin-components hack 
 	  this._element.children(Selector.COLLAPSE_ICON).attr({'data-icon': 'plus'});
 	  this._element.children(Selector.COLLAPSE_ICON).children('path').attr({'d': 'M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'});
-      this._element.children(Selector.COLLAPSE_ICON).addClass(ClassName.EXPAND_ICON).removeClass(ClassName.COLLAPSE_ICON);
+      
+	  this._element.children(Selector.COLLAPSE_ICON).addClass(ClassName.EXPAND_ICON).removeClass(ClassName.COLLAPSE_ICON);
 	  
       var collapsed = $.Event(Event.COLLAPSED);
 
@@ -739,9 +768,11 @@ var Widget = function ($) {
         _this2._parent.removeClass(ClassName.COLLAPSED);
       });
 
+	  // dash-admin-components hack 
 	  this._element.children(Selector.EXPAND_ICON).attr({'data-icon': 'minus'});
 	  this._element.children(Selector.EXPAND_ICON).children('path').attr({'d': 'M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'});
-      this._element.children(Selector.EXPAND_ICON).addClass(ClassName.COLLAPSE_ICON).removeClass(ClassName.EXPAND_ICON);
+      
+	  this._element.children(Selector.EXPAND_ICON).addClass(ClassName.COLLAPSE_ICON).removeClass(ClassName.EXPAND_ICON);
 
       var expanded = $.Event(Event.EXPANDED);
 

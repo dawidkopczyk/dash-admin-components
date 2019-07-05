@@ -26,7 +26,7 @@ server = app.server
 # Navbar
 right_ui = dac.DropdownMenu(
 	badge_text = "!",
-    status = "danger",
+    badge_status = "danger",
     src = "https://quantee.ai",
 	header_text="2 Items",
     children= [
@@ -208,4 +208,4 @@ def update_box_graph(value):
 # Run app    
 # =============================================================================
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    app.run_server(debug=True)

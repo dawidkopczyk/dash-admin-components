@@ -23,7 +23,8 @@ export default class Controlbar extends Component {
 	
 	render() {
 		const {
-			children, 
+			children,
+			disable,
 			title, 
 			skin, 
 			loading_state, 
@@ -31,9 +32,15 @@ export default class Controlbar extends Component {
 			...otherProps
 		} = this.props;
 		
+		var HideCl=''
+		
+		if(disable) {
+			HideCl = ' hide'
+		}
+		
 		return(
 			<aside 
-				className={"control-sidebar control-sidebar-"+skin} 
+				className={"control-sidebar control-sidebar-"+skin+HideCl} 
 				ref={el => this.el = el} 
 				{...otherProps}
 				data-dash-is-loading={
@@ -50,7 +57,8 @@ export default class Controlbar extends Component {
 }
 		
 Controlbar.defaultProps = {
-	skin: "dark"
+	skin: "dark",
+	disable: false
 };
 
 Controlbar.propTypes = {
@@ -71,6 +79,11 @@ Controlbar.propTypes = {
      * Defines CSS styles which will override styles previously set.
      */
     style: PropTypes.object,
+
+	/**
+	* Whether controlbar and controlbar toogle should be visible. Default: True.
+	*/
+	disable: PropTypes.bool,
 	
 	/**
 	* Controlbar title.

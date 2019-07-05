@@ -24,6 +24,7 @@ export default class Sidebar extends Component {
 	render() {
 		const {
 			children, 
+			disable,
 			title,
 			skin,
 			status,
@@ -37,8 +38,12 @@ export default class Sidebar extends Component {
 			...otherProps
 		} = this.props;
 		
-		var BrandTag, ContentTag, BrandCl=''
-	
+		var HideCl='', BrandTag, ContentTag, BrandCl=''
+		
+		if(disable) {
+			HideCl = ' hide'
+		}
+		
 		if(title!=null) {
 			if(brand_color) {
 				BrandCl = " bg-"+brand_color
@@ -53,7 +58,7 @@ export default class Sidebar extends Component {
 		return(
 			<div>
 				<aside 
-					className={"main-sidebar sidebar-"+skin+"-"+status+" elevation-"+elevation} 
+					className={"main-sidebar sidebar-"+skin+"-"+status+" elevation-"+elevation+HideCl} 
 					ref={el => this.el = el}
 					{...otherProps}
 					data-dash-is-loading={
@@ -73,7 +78,8 @@ Sidebar.defaultProps = {
 	status: "primary",
 	url: '#',
     elevation: 4, 
-	opacity: 0.8
+	opacity: 0.8,
+	disable: false
 };
 
 Sidebar.propTypes = {
@@ -94,6 +100,11 @@ Sidebar.propTypes = {
 	* Defines CSS styles which will override styles previously set.
 	*/
 	style: PropTypes.object,
+
+	/**
+	* Whether sidebar and sidebar toogle should be visible. Default: True.
+	*/
+	disable: PropTypes.bool,
 	
 	/**
 	* Sidebar title.

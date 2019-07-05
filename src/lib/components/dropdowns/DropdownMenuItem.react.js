@@ -42,8 +42,10 @@ export default class DropdownMenuItem extends Component {
 						(loading_state && loading_state.is_loading) || undefined
 					}
 				>
-					<FontAwesomeIcon icon={icon}/>
-					{children}
+					<span className="text-dark">
+						<FontAwesomeIcon icon={icon}/>
+						{children}
+					</span>
 					<span className="float-right text-muted text-sm">
 						{date}
 						<span className="time">

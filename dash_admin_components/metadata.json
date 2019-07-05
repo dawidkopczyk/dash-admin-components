@@ -628,6 +628,17 @@
         "required": false,
         "description": "Defines CSS styles which will override styles previously set."
       },
+      "disable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether controlbar and controlbar toogle should be visible. Default: True.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
       "title": {
         "type": {
           "name": "string"
@@ -858,12 +869,12 @@
           "computed": false
         }
       },
-      "status": {
+      "badge_status": {
         "type": {
           "name": "string"
         },
         "required": false,
-        "description": "A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
+        "description": "A color for the badge, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
       },
       "badge_text": {
         "type": {
@@ -2039,6 +2050,17 @@
         },
         "required": false,
         "description": "Defines CSS styles which will override styles previously set."
+      },
+      "disable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether sidebar and sidebar toogle should be visible. Default: True.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
       },
       "title": {
         "type": {

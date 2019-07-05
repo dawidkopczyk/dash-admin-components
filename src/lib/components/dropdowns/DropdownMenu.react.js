@@ -41,7 +41,7 @@ export default class DropdownMenu extends Component {
 		const {
 			children,
 			menu_icon,
-			status,
+			badge_status,
 			badge_text,	
 			align,
 			header_text,
@@ -66,7 +66,7 @@ export default class DropdownMenu extends Component {
 					}
 				>
 					<FontAwesomeIcon icon={menu_icon}/>
-					<span className={"badge badge-"+status+" navbar-badge"}>{badge_text}</span>
+					<span className={"badge badge-"+badge_status+" navbar-badge"}>{badge_text}</span>
 				</a>
 				<div
 					className={this.state.showMenu ? "dropdown-menu dropdown-menu-lg dropdown-menu-"+align+" show" : "dropdown-menu dropdown-menu-lg dropdown-menu-"+align}
@@ -80,7 +80,9 @@ export default class DropdownMenu extends Component {
 					<div className="dropdown-divider"></div>
 						{children}
 					<a className="dropdown-item dropdown-footer" href={src} target="_blank">
-						{footer_text}
+						<span className="text-dark">
+							{footer_text}
+						</span>
 					</a>
 				</div>
 			</li>
@@ -120,10 +122,10 @@ DropdownMenu.propTypes = {
 	menu_icon: PropTypes.string,
 
 	/**
-	* A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.
+	* A color for the badge, options: primary, secondary, success, info, warning, danger or NULL.
     * Default: NULL. 
 	*/
-	status: PropTypes.string,
+	badge_status: PropTypes.string,
 	
 	/**
 	* A text to display in menu icon badge. 

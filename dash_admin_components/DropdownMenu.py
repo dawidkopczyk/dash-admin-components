@@ -14,7 +14,7 @@ in callbacks. The ID needs to be unique across all of the
 components in an app.
 - style (dict; optional): Defines CSS styles which will override styles previously set.
 - menu_icon (string; optional): An icon tag. Default: bell.
-- status (string; optional): A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.
+- badge_status (string; optional): A color for the badge, options: primary, secondary, success, info, warning, danger or NULL.
 Default: NULL.
 - badge_text (string; optional): A text to display in menu icon badge.
 - align (string; optional): Menu alignment. Default: right.
@@ -27,12 +27,12 @@ Those keys have the following types:
   - prop_name (string; optional): Holds which property is loading
   - component_name (string; optional): Holds the name of the component that is loading"""
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, style=Component.UNDEFINED, menu_icon=Component.UNDEFINED, status=Component.UNDEFINED, badge_text=Component.UNDEFINED, align=Component.UNDEFINED, header_text=Component.UNDEFINED, footer_text=Component.UNDEFINED, src=Component.UNDEFINED, loading_state=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'style', 'menu_icon', 'status', 'badge_text', 'align', 'header_text', 'footer_text', 'src', 'loading_state']
+    def __init__(self, children=None, id=Component.UNDEFINED, style=Component.UNDEFINED, menu_icon=Component.UNDEFINED, badge_status=Component.UNDEFINED, badge_text=Component.UNDEFINED, align=Component.UNDEFINED, header_text=Component.UNDEFINED, footer_text=Component.UNDEFINED, src=Component.UNDEFINED, loading_state=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'style', 'menu_icon', 'badge_status', 'badge_text', 'align', 'header_text', 'footer_text', 'src', 'loading_state']
         self._type = 'DropdownMenu'
         self._namespace = 'dash_admin_components'
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'style', 'menu_icon', 'status', 'badge_text', 'align', 'header_text', 'footer_text', 'src', 'loading_state']
+        self.available_properties = ['children', 'id', 'style', 'menu_icon', 'badge_status', 'badge_text', 'align', 'header_text', 'footer_text', 'src', 'loading_state']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

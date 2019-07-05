@@ -37,7 +37,7 @@ export default class Navbar extends Component {
 			...otherProps
 		} = this.props;
 		
-		var BorderCl = '', FixedCl = ''
+		var BorderCl='', FixedCl='', HideSidebarCl, HideControlbarCl
 		
 		if(border) {
 			BorderCl = " border-bottom"
@@ -135,7 +135,7 @@ Navbar.propTypes = {
 	* Whether the navbar is fixed to the top. Default: False.
 	*/
 	fixed: PropTypes.bool,
-
+	
 	/**
 	* Object that holds the loading state object coming from dash-renderer
 	*/
