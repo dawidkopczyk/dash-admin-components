@@ -12,7 +12,8 @@ export default class BoxFooter extends Component {
   
 	render() {
 		const {
-			children, 
+			children,  
+			className,
 			overflow,  
 			loading_state, 
 			setProps, 
@@ -21,7 +22,10 @@ export default class BoxFooter extends Component {
 		
 		return (
 			<div 
-				className="card-footer" 				
+				className={classnames(
+					'card-footer',
+					className
+				)}				
 				style={overflow ? {overflowY: 'auto', maxHeight: '500px'} : null} 
 				{...otherProps}         
 				data-dash-is-loading={
@@ -56,6 +60,11 @@ BoxFooter.propTypes = {
 	* Defines CSS styles which will override styles previously set.
 	*/
 	style: PropTypes.object,
+
+	/**
+	* Often used with CSS to style elements with common properties.
+	*/
+	className: PropTypes.string,
 	
 	/**
 	* Whether to enable overflow in the card body and footer. Default: False.

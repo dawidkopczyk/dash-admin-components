@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 /**
- * One tab to put inside a tab items container.
+ * Create a Boostrap 4 tab item.
  */
 export default class TabItem extends Component {
 	
@@ -13,21 +14,20 @@ export default class TabItem extends Component {
 	render() {
 		const {
 			children, 
+			className,
 			active, 
 			loading_state, 
 			setProps, 
 			...otherProps
 		} = this.props;
-		var TabPaneCl
-		
-		TabPaneCl = "tab-pane container-fluid"
-		if(active) {
-			TabPaneCl += ' active'
-		}
 		
 		return(
 			<div 
-				className={TabPaneCl}
+				className={classnames(
+					'tab-pane container-fluid',
+					{'active': active},
+					className
+				)}
 				{...otherProps}
 				data-dash-is-loading={
 					(loading_state && loading_state.is_loading) || undefined
@@ -63,6 +63,11 @@ TabItem.propTypes = {
 	*/
 	style: PropTypes.object,
 
+	/**
+	* Often used with CSS to style elements with common properties.
+	*/
+	className: PropTypes.string,
+	
 	/**
 	* Apply 'active' style to this component. Default: False.
 	*/

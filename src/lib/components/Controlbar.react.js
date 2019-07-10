@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import './js/adminlte.js';
 import $ from 'jquery';
 
@@ -24,6 +25,7 @@ export default class Controlbar extends Component {
 	render() {
 		const {
 			children,
+			className,
 			disable,
 			title, 
 			skin, 
@@ -32,15 +34,14 @@ export default class Controlbar extends Component {
 			...otherProps
 		} = this.props;
 		
-		var HideCl=''
-		
-		if(disable) {
-			HideCl = ' hide'
-		}
-		
 		return(
 			<aside 
-				className={"control-sidebar control-sidebar-"+skin+HideCl} 
+				className={classnames(
+					'control-sidebar',
+					skin!=null ? `control-sidebar-${skin}`: false,
+					{hide: disable},
+					className
+				)}
 				ref={el => this.el = el} 
 				{...otherProps}
 				data-dash-is-loading={
@@ -79,7 +80,12 @@ Controlbar.propTypes = {
      * Defines CSS styles which will override styles previously set.
      */
     style: PropTypes.object,
-
+	
+	/**
+	* Often used with CSS to style elements with common properties.
+	*/
+	className: PropTypes.string,
+	
 	/**
 	* Whether controlbar and controlbar toogle should be visible. Default: True.
 	*/

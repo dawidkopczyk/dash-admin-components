@@ -13,11 +13,12 @@ Keyword arguments:
 in callbacks. The ID needs to be unique across all of the
 components in an app.
 - style (dict; optional): Defines CSS styles which will override styles previously set.
+- className (string; optional): Often used with CSS to style elements with common properties.
 - type (number; optional): User card type options 2 or NULL.
 - src (string; optional): User image url or path.
 - elevation (number; optional): User card elevation.
 - image_elevation (number; optional): User card image elevation (numeric).
-- status (string; optional): A color for the user card, options: primary, secondary, success, info, warning, danger or NULL.
+- color (string; optional): A color for the user card, options: primary, secondary, success, info, warning, danger or NULL.
 Default: NULL.
 - title (string; optional): User card title.
 - subtitle (string; optional): Subtitle text.
@@ -30,12 +31,12 @@ Those keys have the following types:
   - prop_name (string; optional): Holds which property is loading
   - component_name (string; optional): Holds the name of the component that is loading"""
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, style=Component.UNDEFINED, type=Component.UNDEFINED, src=Component.UNDEFINED, elevation=Component.UNDEFINED, image_elevation=Component.UNDEFINED, status=Component.UNDEFINED, title=Component.UNDEFINED, subtitle=Component.UNDEFINED, width=Component.UNDEFINED, loading_state=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'style', 'type', 'src', 'elevation', 'image_elevation', 'status', 'title', 'subtitle', 'width', 'loading_state']
+    def __init__(self, children=None, id=Component.UNDEFINED, style=Component.UNDEFINED, className=Component.UNDEFINED, type=Component.UNDEFINED, src=Component.UNDEFINED, elevation=Component.UNDEFINED, image_elevation=Component.UNDEFINED, color=Component.UNDEFINED, title=Component.UNDEFINED, subtitle=Component.UNDEFINED, width=Component.UNDEFINED, loading_state=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'style', 'className', 'type', 'src', 'elevation', 'image_elevation', 'color', 'title', 'subtitle', 'width', 'loading_state']
         self._type = 'UserCard'
         self._namespace = 'dash_admin_components'
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'style', 'type', 'src', 'elevation', 'image_elevation', 'status', 'title', 'subtitle', 'width', 'loading_state']
+        self.available_properties = ['children', 'id', 'style', 'className', 'type', 'src', 'elevation', 'image_elevation', 'color', 'title', 'subtitle', 'width', 'loading_state']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

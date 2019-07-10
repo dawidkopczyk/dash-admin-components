@@ -5,10 +5,10 @@ import dash_admin_components as dac
 from example_plots import plot_pie, plot_surface, plot_scatter
 
 dropdown_items = [
-	dac.DropdownItem(url="https://www.google.com", children="Link to google"),
-	dac.DropdownItem(url="#", children="item 2"),
-	dac.DropdownDivider(),
-	dac.DropdownItem(url="#", children="item 3")
+	dac.BoxDropdownItem(url="https://www.google.com", children="Link to google"),
+	dac.BoxDropdownItem(url="#", children="item 2"),
+	dac.BoxDropdownDivider(),
+	dac.BoxDropdownItem(url="#", children="item 3")
 ]
 
 cards_tab = dac.TabItem(id='content_cards', 
@@ -21,11 +21,9 @@ cards_tab = dac.TabItem(id='content_cards',
                 dac.Box(
                     [
                         dac.BoxHeader(
-                            [
-        						dac.BoxHeaderTools(dropdown_items),
-                    			dac.BoxHeaderCollapseButton(),
-                    			dac.BoxHeaderCloseButton()
-                    		],
+        					dac.BoxDropdown(dropdown_items),
+                            collapsible = True,
+                            closable = True,
                             title="Closable box with dropdown"
                         ),
                     	dac.BoxBody(
@@ -36,17 +34,15 @@ cards_tab = dac.TabItem(id='content_cards',
                             )
                         )		
                     ],
-                    status='warning',
+                    color='warning',
                     width=6
                 ),
                         
                 dac.Box(
                     [
                         dac.BoxHeader(
-                            [
-                    			dac.BoxHeaderCollapseButton(),
-                    			dac.BoxHeaderCloseButton()
-                    		],
+                            collapsible = True,
+                            closable = True,
                             title="Closable box with gradient"
                         ),
                     	dac.BoxBody(
@@ -68,10 +64,8 @@ cards_tab = dac.TabItem(id='content_cards',
             dac.Box(
                 [
                     dac.BoxHeader(
-                        [
-                			dac.BoxHeaderCollapseButton(),
-                			dac.BoxHeaderCloseButton()
-                		],
+                        collapsible = True,
+                        closable = True,
                         title="Card with solidHeader and elevation"
                     ),
                 	dac.BoxBody(
@@ -82,7 +76,7 @@ cards_tab = dac.TabItem(id='content_cards',
                         )
                     )		
                 ],
-                status='primary',
+                color='primary',
                 solid_header=True,
                 elevation=4,
                 width=6

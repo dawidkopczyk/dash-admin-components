@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 /**
  * Create a Boostrap 4 dashboard main sidebar menu.
@@ -9,10 +10,12 @@ export default class SidebarMenu extends Component {
 	constructor(props) {
         super(props);
     }
+
 	
 	render() {	
 		const {
 			children, 
+			className,
 			loading_state, 
 			setProps, 
 			...otherProps
@@ -20,7 +23,10 @@ export default class SidebarMenu extends Component {
 		
 		return(
 			<ul 
-				className="nav nav-pills nav-sidebar flex-column" 
+				className={classnames(
+					"nav nav-pills nav-sidebar flex-column",
+					className
+				)}
 				data-widget="treeview" 
 				role="menu"
 				{...otherProps}
@@ -55,6 +61,11 @@ SidebarMenu.propTypes = {
 	*/
 	style: PropTypes.object,
 
+	/**
+	* Often used with CSS to style elements with common properties.
+	*/
+	className: PropTypes.string,
+	
 	/**
 	* Object that holds the loading state object coming from dash-renderer
 	*/

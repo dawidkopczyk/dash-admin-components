@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 /**
  * Create a Boostrap 4 box header.
@@ -13,16 +15,46 @@ export default class BoxHeader extends Component {
 	render() {
 		const {
 			children, 
+			className, 
 			header_border, 
-			title,			
+			title,
+			collapsible,
+			collapsed,
+			closable,			
 			loading_state, 
 			setProps, 
 			...otherProps
 		} = this.props;
+
+		var CloseButton, CollapseButton
 		
+		if(closable) {
+			CloseButton = <button 
+				type="button" 
+				className="btn btn-tool" 
+				data-widget="remove" 
+			>
+				<FontAwesomeIcon icon='times'/>
+			</button> 
+		}
+
+		if(collapsible) {
+			CollapseButton = <button 
+				type="button" 
+				className="btn btn-tool" 
+				data-widget="collapse" 
+			>
+				<FontAwesomeIcon icon={collapsed ? "plus" : "minus"}/>
+			</button>
+		}
+				
 		return (
 			<div 
-				className={header_border ? "card-header" : "card-header no-border"} 
+				className={classnames(
+					'card-header',
+					{'no-border': !header_border},
+					className
+				)}
 				{...otherProps}         
 				data-dash-is-loading={
 					(loading_state && loading_state.is_loading) || undefined
@@ -31,6 +63,8 @@ export default class BoxHeader extends Component {
 				<h3 className="card-title">{title}</h3>
 				<div className="card-tools">
 					{children}
+					{CollapseButton}
+					{CloseButton}
 				</div>
 			</div>
 		)       
@@ -39,7 +73,9 @@ export default class BoxHeader extends Component {
 
 BoxHeader.defaultProps = {
 	title: "\u200C",
-	header_border: true
+	header_border: true,
+	collapsible: true,
+	closable: false
 };
 
 BoxHeader.propTypes = {
@@ -60,6 +96,11 @@ BoxHeader.propTypes = {
 	* Defines CSS styles which will override styles previously set.
 	*/
 	style: PropTypes.object,
+
+	/**
+	* Often used with CSS to style elements with common properties.
+	*/
+	className: PropTypes.string,
 	
 	/**
 	* Box title.
@@ -71,6 +112,23 @@ BoxHeader.propTypes = {
 	*/
 	header_border: PropTypes.bool,
 
+	/**
+	* If True, display a button in the upper right that allows
+	* the user to collapse the box. Default: True.
+	*/
+	collapsible: PropTypes.bool,
+
+	/**
+	* Whether to start collapsed. Default: False.
+	*/
+	collapsed: PropTypes.bool,
+	
+	/**
+	* If True, display a button in the upper right that allows the user to close the box.
+	* Default: False.
+	*/
+	closable: PropTypes.bool,
+	
 	/**
 	* Object that holds the loading state object coming from dash-renderer
 	*/

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import '../js/adminlte.js';
 import $ from 'jquery';
 
@@ -24,10 +25,11 @@ export default class Sidebar extends Component {
 	render() {
 		const {
 			children, 
+			className,
 			disable,
 			title,
 			skin,
-			status,
+			color,
 			brand_color,
 			url,
 			src,
@@ -38,27 +40,34 @@ export default class Sidebar extends Component {
 			...otherProps
 		} = this.props;
 		
-		var HideCl='', BrandTag, ContentTag, BrandCl=''
-		
-		if(disable) {
-			HideCl = ' hide'
-		}
+		var BrandTag, ContentTag
 		
 		if(title!=null) {
-			if(brand_color) {
-				BrandCl = " bg-"+brand_color
-			}
-			BrandTag = <a className={"brand-link" + BrandCl} href={url} target='_blank'>
+			BrandTag = <a 
+				className={classnames(
+					'brand-link',
+					brand_color!=null ? `bg-${brand_color}` : false
+				)}
+				href={url} 
+				target='_blank'
+			>
 				<img src={src} className="brand-image img-circle elevation-3" style={{opacity: opacity}}></img>
 				<span className="brand-text font-weight-light">{title}</span>
 			</a>
 		}
+		
 		ContentTag = <div className="sidebar"><nav className = "mt-2">{children}</nav></div>
   
 		return(
 			<div>
 				<aside 
-					className={"main-sidebar sidebar-"+skin+"-"+status+" elevation-"+elevation+HideCl} 
+					className={classnames(
+						'main-sidebar',
+						color!=null ? `sidebar-${skin}-${color}` : `sidebar-${skin}`,
+						elevation!=null ? `elevation-${elevation}` : false,
+						{hide: disable},
+						className
+					)}
 					ref={el => this.el = el}
 					{...otherProps}
 					data-dash-is-loading={
@@ -75,7 +84,7 @@ export default class Sidebar extends Component {
 		
 Sidebar.defaultProps = { 
 	skin: "dark", 
-	status: "primary",
+	color: "primary",
 	url: '#',
     elevation: 4, 
 	opacity: 0.8,
@@ -102,6 +111,11 @@ Sidebar.propTypes = {
 	style: PropTypes.object,
 
 	/**
+	* Often used with CSS to style elements with common properties.
+	*/
+	className: PropTypes.string,
+
+	/**
 	* Whether sidebar and sidebar toogle should be visible. Default: True.
 	*/
 	disable: PropTypes.bool,
@@ -120,7 +134,7 @@ Sidebar.propTypes = {
 	* A color for the sidebar, options: primary, secondary, success, info, 
 	* warning, danger. Default: primary.
 	*/
-	status: PropTypes.string,
+	color: PropTypes.string,
 	
 	/**
 	* A color for the brand, options: primary, secondary, success, info, 

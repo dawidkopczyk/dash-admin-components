@@ -13,6 +13,7 @@ Keyword arguments:
 in callbacks. The ID needs to be unique across all of the
 components in an app.
 - style (dict; optional): Defines CSS styles which will override styles previously set.
+- className (string; optional): Often used with CSS to style elements with common properties.
 - disable (boolean; optional): Whether controlbar and controlbar toogle should be visible. Default: True.
 - title (string; optional): Controlbar title.
 - skin (string; optional): Controlbar skin, options: dark or light. Default: dark.
@@ -22,12 +23,12 @@ Those keys have the following types:
   - prop_name (string; optional): Holds which property is loading
   - component_name (string; optional): Holds the name of the component that is loading"""
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, style=Component.UNDEFINED, disable=Component.UNDEFINED, title=Component.UNDEFINED, skin=Component.UNDEFINED, loading_state=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'style', 'disable', 'title', 'skin', 'loading_state']
+    def __init__(self, children=None, id=Component.UNDEFINED, style=Component.UNDEFINED, className=Component.UNDEFINED, disable=Component.UNDEFINED, title=Component.UNDEFINED, skin=Component.UNDEFINED, loading_state=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'style', 'className', 'disable', 'title', 'skin', 'loading_state']
         self._type = 'Controlbar'
         self._namespace = 'dash_admin_components'
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'style', 'disable', 'title', 'skin', 'loading_state']
+        self.available_properties = ['children', 'id', 'style', 'className', 'disable', 'title', 'skin', 'loading_state']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

@@ -1,6 +1,6 @@
 {
   "name": "dash_admin_components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "AdminLTE3 component suite for Dash",
   "main": "build/index.js",
   "scripts": {
@@ -16,9 +16,7 @@
   },
   "author": "Dawid Kopczyk <dawid.kopczyk@quantee.ai>",
   "license": "MIT",
-  "dependencies": {
-    "ramda": "^0.25.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
@@ -30,6 +28,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "classnames": "^2.2.6",
     "copyfiles": "^2.0.0",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
@@ -38,6 +37,7 @@
     "eslint-plugin-react": "^7.9.1",
     "jquery": "^3.4.1",
     "npm": "^6.1.0",
+    "ramda": "^0.25.0",
     "react": "^16.8.6",
     "react-docgen": "^2.20.1",
     "react-dom": "^16.8.6",

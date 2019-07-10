@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 /**
  * AdminLTE3 widget user card.
@@ -13,11 +14,12 @@ export default class UserCard extends Component {
 	render() {
 		const {
 			children, 
+			className, 
 			type, 
 			src, 
 			elevation, 
 			image_elevation, 
-			status, 
+			color, 
 			title, 
 			subtitle, 
 			width, 
@@ -25,37 +27,39 @@ export default class UserCard extends Component {
 			setProps, 
 			...otherProps
 		} = this.props;
-		var UserCardCl, HeaderCl, HeaderImageTag, HeaderTag, FooterTag
-		
-		UserCardCl = "card card-widget"
-		if(type!=null) {
-			UserCardCl += ' widget-user-'+type
-		}else{
-			UserCardCl += ' widget-user'
-		}
-		if(elevation!=null) {
-			UserCardCl += ' elevation-'+elevation	
-		}
-
-		HeaderCl = "widget-user-header"
-		if(status!=null) {
-			HeaderCl += ' bg-'+status
-		}
+		var HeaderImageTag, HeaderTag, FooterTag
 		
 		HeaderImageTag = <div className="widget-user-image">
-			<img className={image_elevation!=null ? "img-circle elevation-"+image_elevation : "img-circle"} src={src}></img>
+			<img 
+				className={classnames(
+					'img-circle',
+					image_elevation!=null ? `elevation-${image_elevation}` : false
+				)}
+				src={src}
+			>
+			</img>
 		</div>
 		
 		if(type==null) {
 			HeaderTag=<React.Fragment>
-				<div className={HeaderCl}>
+				<div 
+					className={classnames(
+						'widget-user-header',
+						color!=null ? `bg-${color}` : false
+					)}
+				>
 					<h3 className="widget-user-username">{title}</h3>
 					<h5 className="widget-user-desc">{subtitle}</h5>
 				</div>
 				{HeaderImageTag}
 			</React.Fragment>
 		}else{
-			HeaderTag=<div className={HeaderCl}>
+			HeaderTag=<div 
+				className={classnames(
+					'widget-user-header',
+					color!=null ? `bg-${color}` : false
+				)}
+			>
 				{HeaderImageTag}
 				<h3 className="widget-user-username">{title}</h3>
 				<h5 className="widget-user-desc">{subtitle}</h5>
@@ -67,7 +71,12 @@ export default class UserCard extends Component {
 		return(
 			<div className = {"col-sm-"+width}>
 				<div 
-					className={UserCardCl}
+					className={classnames(
+						'card card-widget',
+						type!=null ? `widget-user-${type}` : 'widget-user',
+						elevation!=null ? `elevation-${elevation}` : false,
+						className,
+					)}
 					{...otherProps}         
 					data-dash-is-loading={
 						(loading_state && loading_state.is_loading) || undefined
@@ -103,7 +112,12 @@ UserCard.propTypes = {
 	* Defines CSS styles which will override styles previously set.
 	*/
 	style: PropTypes.object,
-  
+ 
+	/**
+	* Often used with CSS to style elements with common properties.
+	*/
+	className: PropTypes.string,
+	
 	/**
 	* User card type options 2 or NULL.
 	*/
@@ -128,7 +142,7 @@ UserCard.propTypes = {
 	* A color for the user card, options: primary, secondary, success, info, warning, danger or NULL.
     * Default: NULL. 
 	*/
-	status : PropTypes.string,
+	color : PropTypes.string,
 
 	/**
 	* User card title. 

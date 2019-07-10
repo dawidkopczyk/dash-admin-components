@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 /**
  * Boostrap 4 simple box.
@@ -12,12 +13,14 @@ export default class SimpleBox extends Component {
 	render() {
 		const {
 			children, 
+			className, 
 			title, 
 			width, 
 			loading_state, 
 			setProps, 
 			...otherProps
 		} = this.props;
+		
 		var SimpleBoxHeader, SimpleBoxBody
 		
 		SimpleBoxHeader = <div className="card-header no-border">
@@ -33,7 +36,10 @@ export default class SimpleBox extends Component {
 		return (
 			<div className = {"col-sm-"+width}>
 				<div 
-					className="card card-box" 
+					className={classnames(
+						'card card-box',
+						className,
+					)}
 					{...otherProps}         
 					data-dash-is-loading={
 						(loading_state && loading_state.is_loading) || undefined
@@ -69,6 +75,11 @@ SimpleBox.propTypes = {
 	* Defines CSS styles which will override styles previously set.
 	*/
 	style: PropTypes.object,
+	
+	/**
+	* Often used with CSS to style elements with common properties.
+	*/
+	className: PropTypes.string,
 	
 	/**
 	* The width of the box, using the Bootstrap grid system. This is

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 /**
@@ -11,13 +12,14 @@ export default class InfoBox extends Component {
         super(props);
     }
 	
-	render() {
+	render() {	
 		const {
 			children, 
+			className, 
 			value, 
 			title, 
 			elevation, 
-			status, 
+			color, 
 			gradient_color, 
 			icon, 
 			icon_elevation, 
@@ -26,29 +28,17 @@ export default class InfoBox extends Component {
 			setProps, 
 			...otherProps
 		} = this.props;
-		var InfoBoxCl, IconTag, IconTagCl, ContentTag
 		
-		if(gradient_color) {
-			InfoBoxCl = "info-box bg-"+gradient_color+"-gradient"
-		}else{
-			if(!status) {
-				InfoBoxCl = "info-box"
-			}else{
-				InfoBoxCl = "info-box bg-"+status
-			}
-		}
-
-		if(!elevation) {
-			InfoBoxCl += " elevation-"+elevation
-		}
-  
-		if(!icon_elevation) {
-			IconTagCl = "info-box-icon"
-		}else{
-			IconTagCl = "info-box-icon elevation-"+icon_elevation
-		}
+		var IconTag, ContentTag
 		
-		IconTag = <span className={IconTagCl}><FontAwesomeIcon icon={icon}/></span>
+		IconTag = <span 
+			className={classnames(
+				'info-box-icon',
+				icon_elevation!=null ? `elevation-${icon_elevation}` : false
+			)}
+		>
+			<FontAwesomeIcon icon={icon}/>
+		</span>
 		
 		ContentTag = <div className="info-box-content">
 			<span className="info-box-text">
@@ -62,7 +52,14 @@ export default class InfoBox extends Component {
 		
 		return (
 			<div className = {"col-sm-"+width}>
-				<div className = {InfoBoxCl}
+				<div 
+					className={classnames(
+						'info-box',
+						gradient_color!=null ? `bg-${gradient_color}-gradient` : false,
+						gradient_color==null && color!=null ? `bg-${color}` : false,
+						elevation!=null ? `elevation-${elevation}` : false,
+						className
+					)}
 					{...otherProps}         
 					data-dash-is-loading={
 						(loading_state && loading_state.is_loading) || undefined
@@ -100,6 +97,11 @@ InfoBox.propTypes = {
 	* Defines CSS styles which will override styles previously set.
 	*/
 	style: PropTypes.object,
+
+	/**
+	* Often used with CSS to style elements with common properties.
+	*/
+	className: PropTypes.string,
 	
 	/**
 	* The width of the box, using the Bootstrap grid system. This is
@@ -130,7 +132,7 @@ InfoBox.propTypes = {
 	* A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.
     * Default: NULL. 
 	*/
-	status: PropTypes.string,
+	color: PropTypes.string,
 
 	/**
 	* A color for the box, options: primary, secondary, success, info, warning, danger or NULL.

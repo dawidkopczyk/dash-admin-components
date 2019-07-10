@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 /**
  * Create a Boostrap 4 dashboard main sidebar header.
@@ -13,6 +14,7 @@ export default class SidebarHeader extends Component {
 	render() {
 		const {
 			children, 
+			className,
 			loading_state, 
 			setProps, 
 			...otherProps
@@ -20,7 +22,10 @@ export default class SidebarHeader extends Component {
 		
 		return(
 			<li 
-				className="nav-header" 
+				className={classnames(
+					'nav-header',
+					className
+				)} 
 				{...otherProps}
 				data-dash-is-loading={
 					(loading_state && loading_state.is_loading) || undefined
@@ -53,6 +58,11 @@ SidebarHeader.propTypes = {
 	*/
 	style: PropTypes.object,
 
+	/**
+	* Often used with CSS to style elements with common properties.
+	*/
+	className: PropTypes.string,
+	
 	/**
 	* Object that holds the loading state object coming from dash-renderer
 	*/

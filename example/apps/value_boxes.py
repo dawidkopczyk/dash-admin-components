@@ -9,7 +9,7 @@ value_boxes_tab = dac.TabItem(id='content_value_boxes',
             dac.ValueBox(
             	value=150,
                 subtitle="New orders",
-                status = "primary",
+                color = "primary",
                 icon = "shopping-cart",
                 href = "#"
             ),
@@ -17,19 +17,19 @@ value_boxes_tab = dac.TabItem(id='content_value_boxes',
               elevation = 4,
               value = "53%",
               subtitle = "New orders",
-              status = "danger",
+              color = "danger",
               icon = "cogs"
             ),
             dac.ValueBox(
               value = "44",
               subtitle = "User Registrations",
-              status = "warning",
+              color = "warning",
               icon = "suitcase"
             ),
             dac.ValueBox(
               value = "53%",
               subtitle = "Bounce rate",
-              status = "success",
+              color = "success",
               icon = "database"
             )
         ], className='row'),
@@ -42,7 +42,7 @@ value_boxes_tab = dac.TabItem(id='content_value_boxes',
             ),
             dac.InfoBox(
               title = "Bookmarks",
-              status = "info",
+              color = "info",
               value = 240,
               icon = "bookmark"
             ),

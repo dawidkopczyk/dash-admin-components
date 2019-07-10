@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 /**
  * Create a Boostrap 4 box body. 
@@ -12,7 +13,8 @@ export default class BoxBody extends Component {
   
 	render() {
 		const {
-			children, 
+			children,  
+			className,
 			overflow,  
 			loading_state, 
 			setProps, 
@@ -21,7 +23,10 @@ export default class BoxBody extends Component {
 		
 		return (
 			<div 
-				className="card-body" 
+				className={classnames(
+					'card-body',
+					className
+				)}
 				style={overflow ? {overflowY: 'auto', maxHeight: '500px'} : null} 
 				{...otherProps}         
 				data-dash-is-loading={
@@ -56,6 +61,11 @@ BoxBody.propTypes = {
 	* Defines CSS styles which will override styles previously set.
 	*/
 	style: PropTypes.object,
+
+	/**
+	* Often used with CSS to style elements with common properties.
+	*/
+	className: PropTypes.string,
 	
 	/**
 	* Whether to enable overflow in the card body and footer. Default: False.

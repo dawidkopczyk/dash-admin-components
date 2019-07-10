@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 /**
- * A container for tab items.
+ * Create a Boostrap 4 tab items container.
  */
 export default class TabItems extends Component {
 	
@@ -13,6 +14,7 @@ export default class TabItems extends Component {
 	render() {	
 		const {
 			children, 
+			className,
 			setProps, 
 			loading_state, 
 			...otherProps
@@ -20,7 +22,10 @@ export default class TabItems extends Component {
 		
 		return(
 			<div 
-				className="tab-content"
+				className={classnames(
+					'tab-content',
+					className
+				)}
 				{...otherProps}
 				data-dash-is-loading={
 					(loading_state && loading_state.is_loading) || undefined
@@ -53,6 +58,11 @@ TabItems.propTypes = {
 	*/
 	style: PropTypes.object,
 
+	/**
+	* Often used with CSS to style elements with common properties.
+	*/
+	className: PropTypes.string,
+	
 	/**
 	* Object that holds the loading state object coming from dash-renderer
 	*/

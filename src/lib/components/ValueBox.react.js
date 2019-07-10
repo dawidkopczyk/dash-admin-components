@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 /**
@@ -14,9 +15,10 @@ export default class ValueBox extends Component {
 	render() {
 		const {
 			value, 
+			className, 
 			subtitle, 
 			elevation, 
-			status, 
+			color, 
 			icon, 
 			href, 
 			width, 
@@ -25,15 +27,8 @@ export default class ValueBox extends Component {
 			setProps, 
 			...otherProps
 		} = this.props;
-		var ValueBoxCl, InnerTag, IconTag, FooterTag
 		
-		ValueBoxCl = "small-box"
-		if(status!=null) {
-			ValueBoxCl += " bg-"+status
-		}
-		if(elevation!=null) {
-			ValueBoxCl += " elevation-"+elevation
-		}
+		var InnerTag, IconTag, FooterTag
 		
 		InnerTag = <div className='inner'>
 			{value}
@@ -58,7 +53,12 @@ export default class ValueBox extends Component {
 		return(
 			<div className = {"col-sm-"+width}>
 				<div 
-					className={ValueBoxCl}
+					className={classnames(
+						'small-box',
+						color!=null ? `bg-${color}` : false,
+						elevation!=null ? `elevation-${elevation}` : false,
+						className,
+					)}
 					{...otherProps}         
 					data-dash-is-loading={
 						(loading_state && loading_state.is_loading) || undefined
@@ -87,11 +87,24 @@ ValueBox.propTypes = {
 	* components in an app.
 	*/
 	id: PropTypes.string,
-
+	
 	/**
 	* Defines CSS styles which will override styles previously set.
 	*/
 	style: PropTypes.object,
+
+	/**
+	* Often used with CSS to style elements with common properties.
+	*/
+	className: PropTypes.string,
+
+	/**
+	* The value to display in the box. Usually a number or short text.
+	*/
+	value: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.number
+	]),
 	
 	/**
 	* The width of the box, using the Bootstrap grid system. This is
@@ -104,7 +117,7 @@ ValueBox.propTypes = {
 	* A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.
     * Default: NULL. 
 	*/
-	status: PropTypes.string,
+	color: PropTypes.string,
 
 	/**
 	* An icon tag. Default: user.
@@ -115,14 +128,6 @@ ValueBox.propTypes = {
 	* Subtitle text.
 	*/
 	subtitle: PropTypes.string,
-
-	/**
-	* The value to display in the box. Usually a number or short text.
-	*/
-	value: PropTypes.oneOfType([
-		PropTypes.string,
-		PropTypes.number
-	]),
 
 	/**
 	* An optional URL to link to.

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 /**
  * Create a Boostrap 4 dashboard footer.
@@ -12,7 +13,8 @@ export default class Footer extends Component {
   
 	render() {
 		const {
-			children, 
+			children,
+			className, 
 			right_text, 
 			loading_state, 
 			setProps, 
@@ -20,8 +22,11 @@ export default class Footer extends Component {
 		} = this.props;
 		
 		return(
-			<footer 
-				className="main-footer" 
+			<footer
+				className={classnames(
+					'main-footer',
+					className
+				)}
 				{...otherProps}
 				data-dash-is-loading={
 					(loading_state && loading_state.is_loading) || undefined
@@ -59,6 +64,11 @@ Footer.propTypes = {
 	* Defines CSS styles which will override styles previously set.
 	*/
 	style: PropTypes.object,
+	
+	/**
+	* Often used with CSS to style elements with common properties.
+	*/
+	className: PropTypes.string,
 	
 	/**
 	* Footer text placed on the right of container.

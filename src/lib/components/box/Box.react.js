@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import '../js/adminlte.js';
 import $ from 'jquery';
 
 /**
  * Create a Boostrap 4 box. 
- * The children of this component are: BoxHeader, BoxBody, BodyFooter.
+ * The children of this component are: BoxHeader, BoxBody, BoxFooter.
  */
 export default class Box extends Component {
 	
@@ -25,8 +26,9 @@ export default class Box extends Component {
 	render() {
 		const {
 			children, 
+			className,
 			gradient_color, 
-			status, 
+			color, 
 			solid_header, 
 			collapsed, 
 			elevation, 
@@ -36,33 +38,19 @@ export default class Box extends Component {
 			...otherProps
 		} = this.props;
 		
-		var BoxCl
-		
-		if(gradient_color!=null) {
-			BoxCl = "card bg-"+gradient_color+"-gradient"
-		}else{
-			if(status==null) {
-				BoxCl = "card card-default"	
-			}else{
-				if(solid_header) {
-					BoxCl = "card card-outline card-"+status
-				}else{
-					BoxCl = "card card-"+status
-				}
-			}
-		}
-		
-		if(collapsed) {
-			BoxCl += " collapsed-card"
-		}
-		if(elevation!=null) {
-			BoxCl += " elevation-"+elevation
-		}
-		
 		return (
 			<div className = {"col-sm-"+width}>
 				<div 
-					className={BoxCl} 
+					className={classnames(
+						'card',
+						gradient_color!=null ? `bg-${gradient_color}-gradient` : false,
+						gradient_color==null && color==null ? 'card-default' : false,
+						gradient_color==null && color!=null && solid_header ? 'card-outline' : false,
+						gradient_color==null && color!=null ? `card-${color}` : false,
+						elevation!=null ? `elevation-${elevation}` : false,
+						{'collapsed-card': collapsed},
+						className
+					)} 
 					ref={el => this.el = el}
 					{...otherProps}         
 					data-dash-is-loading={
@@ -100,12 +88,17 @@ Box.propTypes = {
 	* Defines CSS styles which will override styles previously set.
 	*/
 	style: PropTypes.object,
+
+	/**
+	* Often used with CSS to style elements with common properties.
+	*/
+	className: PropTypes.string,
 	
 	/**
 	* A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.
     * Default: NULL. 
 	*/
-	status: PropTypes.string,
+	color: PropTypes.string,
 	
 	/**
 	* Box elevation. 

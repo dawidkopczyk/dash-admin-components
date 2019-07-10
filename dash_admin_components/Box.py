@@ -6,7 +6,7 @@ from dash.development.base_component import Component, _explicitize_args
 class Box(Component):
     """A Box component.
 Create a Boostrap 4 box. 
-The children of this component are: BoxHeader, BoxBody, BodyFooter.
+The children of this component are: BoxHeader, BoxBody, BoxFooter.
 
 Keyword arguments:
 - children (a list of or a singular dash component, string or number; optional): The children of this component.
@@ -14,7 +14,8 @@ Keyword arguments:
 in callbacks. The ID needs to be unique across all of the
 components in an app.
 - style (dict; optional): Defines CSS styles which will override styles previously set.
-- status (string; optional): A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.
+- className (string; optional): Often used with CSS to style elements with common properties.
+- color (string; optional): A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.
 Default: NULL.
 - elevation (number; optional): Box elevation.
 - solid_header (boolean; optional): Should the header be shown with a solid color background. Default: False.
@@ -30,12 +31,12 @@ Those keys have the following types:
   - prop_name (string; optional): Holds which property is loading
   - component_name (string; optional): Holds the name of the component that is loading"""
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, style=Component.UNDEFINED, status=Component.UNDEFINED, elevation=Component.UNDEFINED, solid_header=Component.UNDEFINED, gradient_color=Component.UNDEFINED, width=Component.UNDEFINED, collapsed=Component.UNDEFINED, loading_state=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'style', 'status', 'elevation', 'solid_header', 'gradient_color', 'width', 'collapsed', 'loading_state']
+    def __init__(self, children=None, id=Component.UNDEFINED, style=Component.UNDEFINED, className=Component.UNDEFINED, color=Component.UNDEFINED, elevation=Component.UNDEFINED, solid_header=Component.UNDEFINED, gradient_color=Component.UNDEFINED, width=Component.UNDEFINED, collapsed=Component.UNDEFINED, loading_state=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'style', 'className', 'color', 'elevation', 'solid_header', 'gradient_color', 'width', 'collapsed', 'loading_state']
         self._type = 'Box'
         self._namespace = 'dash_admin_components'
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'style', 'status', 'elevation', 'solid_header', 'gradient_color', 'width', 'collapsed', 'loading_state']
+        self.available_properties = ['children', 'id', 'style', 'className', 'color', 'elevation', 'solid_header', 'gradient_color', 'width', 'collapsed', 'loading_state']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')
