@@ -45,7 +45,7 @@ export default class ValueBox extends Component {
 				<FontAwesomeIcon icon="arrow-circle-right"/>
 			</a>
 		}else{
-			FooterTag = <a href={href} target="_blank" className='small-box-footer'>
+			FooterTag = <a href={href} target="_blank" className='small-box-footer' style={{'z-index': 0}}>
 				<br></br>
 			</a>
 		}
@@ -114,7 +114,7 @@ ValueBox.propTypes = {
 	width: PropTypes.number,
 	
 	/**
-	* A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.
+	* A color for the value box, options: primary, secondary, success, info, warning, danger or NULL.
     * Default: NULL. 
 	*/
 	color: PropTypes.string,

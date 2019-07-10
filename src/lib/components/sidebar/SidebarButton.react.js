@@ -25,24 +25,41 @@ export default class SidebarButton extends Component {
   
 	render() {
 		const {
-			children, 
+			className,
+			label, 
 			icon, 
+			color,
+			badge_label,
+			badge_color,
 			loading_state, 
 			setProps, 
 			...otherProps
 		} = this.props;
 
+		var BadgeTag
+		
+		if(badge_label!=null) {
+			BadgeTag= <span 
+				className={classnames(
+					'badge right',
+					badge_color!=null ? `badge-${badge_color}` : false
+				)}
+			>
+				{badge_label}
+			</span>			
+		}
+		
 		return(
 			<li 
 				className={classnames(
 					'nav-item',
-					color!=null ? `bg-${color}` : false,
 					className
 				)}
 			>
 				<a 
 					className={classnames(
 						'nav-link',
+						color!=null ? `bg-${color}` : false,
 						'my-1',
 						{disabled: otherProps.disabled}
 					)} 
@@ -57,9 +74,11 @@ export default class SidebarButton extends Component {
 					}
 				>
 					<FontAwesomeIcon icon={icon} className="nav-icon"/>
-					<p>{children}</p>
+					<p>
+						{label}
+						{BadgeTag}
+					</p>
 				</a>
-				{SubItems}
 			</li>								
 		)               
 	} 
@@ -81,11 +100,6 @@ SidebarButton.propTypes = {
 	id: PropTypes.string,
 
 	/**
-	* The children of this component.
-	*/
-	children: PropTypes.node,
-
-	/**
 	* Defines CSS styles which will override styles previously set.
 	*/
 	style: PropTypes.object,
@@ -96,6 +110,11 @@ SidebarButton.propTypes = {
 	className: PropTypes.string,
 
 	/**
+	* Button label.
+	*/
+	label: PropTypes.string,
+	
+	/**
 	* Disable the link. Default: False.
 	*/
 	disabled: PropTypes.bool,
@@ -105,6 +124,27 @@ SidebarButton.propTypes = {
 	*/
 	icon: PropTypes.string,
 
+	/**
+	* A color for the sidebar button, options: primary, secondary, success, info, warning, danger or NULL.
+    * Default: NULL. 
+	*/
+	color: PropTypes.string,
+
+    /**
+    * Indicates that the hyperlink is to be used for downloading a resource.
+    */
+    download: PropTypes.string,
+
+    /**
+    * The URL of a linked resource.
+    */
+    href: PropTypes.string,
+
+    /**
+    * The URL target.
+    */
+    target: PropTypes.string,
+	
 	/**
 	* An integer that represents the number of times
 	* that this element has been clicked on.

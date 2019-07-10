@@ -17,7 +17,7 @@ components in an app.
 - width (number; optional): The width of the box, using the Bootstrap grid system. This is
 used for row-based layouts. The overall width of a region is 12, so the
 default width of 4 occupies 1/3 of that width. Default: 3.
-- color (string; optional): A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.
+- color (string; optional): A color for the value box, options: primary, secondary, success, info, warning, danger or NULL.
 Default: NULL.
 - icon (string; optional): An icon tag. Default: user.
 - subtitle (string; optional): Subtitle text.

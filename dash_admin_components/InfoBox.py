@@ -20,7 +20,7 @@ default width of 4 occupies 1/3 of that width. Default: 4.
 - title (string; optional): Box title.
 - icon (string; optional): An icon tag. Default: star.
 - value (string | number; optional): The value to display in the box. Usually a number or short text.
-- color (string; optional): A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.
+- color (string; optional): A color for the info box, options: primary, secondary, success, info, warning, danger or NULL.
 Default: NULL.
 - gradient_color (string; optional): A color for the box, options: primary, secondary, success, info, warning, danger or NULL.
 Default: NULL.

@@ -129,7 +129,7 @@ InfoBox.propTypes = {
 	]),
 
 	/**
-	* A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.
+	* A color for the info box, options: primary, secondary, success, info, warning, danger or NULL.
     * Default: NULL. 
 	*/
 	color: PropTypes.string,

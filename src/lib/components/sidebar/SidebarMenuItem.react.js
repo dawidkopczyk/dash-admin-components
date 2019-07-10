@@ -52,6 +52,7 @@ export default class SidebarMenuItem extends Component {
 		}
 		
 		if(children){
+			
 			return (
 				<li 
 					className={classnames(

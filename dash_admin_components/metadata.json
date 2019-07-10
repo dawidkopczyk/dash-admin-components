@@ -1262,7 +1262,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
+        "description": "A color for the info box, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
       },
       "gradient_color": {
         "type": {
@@ -1939,13 +1939,6 @@
         "required": false,
         "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
       },
-      "children": {
-        "type": {
-          "name": "node"
-        },
-        "required": false,
-        "description": "The children of this component."
-      },
       "style": {
         "type": {
           "name": "object"
@@ -1959,6 +1952,13 @@
         },
         "required": false,
         "description": "Often used with CSS to style elements with common properties."
+      },
+      "label": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Button label."
       },
       "disabled": {
         "type": {
@@ -1977,6 +1977,34 @@
         },
         "required": false,
         "description": "Menu item icon."
+      },
+      "color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A color for the sidebar button, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
+      },
+      "download": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Indicates that the hyperlink is to be used for downloading a resource."
+      },
+      "href": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The URL of a linked resource."
+      },
+      "target": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The URL target."
       },
       "n_clicks": {
         "type": {
@@ -3369,7 +3397,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
+        "description": "A color for the value box, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
       },
       "icon": {
         "type": {
