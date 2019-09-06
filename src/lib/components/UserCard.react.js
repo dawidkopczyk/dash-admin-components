@@ -69,7 +69,12 @@ export default class UserCard extends Component {
 		FooterTag=<div className="card-footer" style={{overflowY: 'auto', maxHeight: '500px'}}>{children}</div>
 		
 		return(
-			<div className = {"col-sm-"+width}>
+			<div 
+				className = {"col-sm-"+width}
+				data-dash-is-loading={
+					(loading_state && loading_state.is_loading) || undefined
+				}
+			>
 				<div 
 					className={classnames(
 						'card card-widget',
@@ -77,10 +82,7 @@ export default class UserCard extends Component {
 						elevation!=null ? `elevation-${elevation}` : false,
 						className,
 					)}
-					{...otherProps}         
-					data-dash-is-loading={
-						(loading_state && loading_state.is_loading) || undefined
-					}				
+					{...otherProps}         				
 				>
 					{HeaderTag}
 					{FooterTag}

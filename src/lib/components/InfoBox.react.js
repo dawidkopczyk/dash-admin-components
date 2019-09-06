@@ -51,7 +51,12 @@ export default class InfoBox extends Component {
 		</div>
 		
 		return (
-			<div className = {"col-sm-"+width}>
+			<div 
+				className = {"col-sm-"+width}
+				data-dash-is-loading={
+					(loading_state && loading_state.is_loading) || undefined
+				}
+			>
 				<div 
 					className={classnames(
 						'info-box',
@@ -61,9 +66,6 @@ export default class InfoBox extends Component {
 						className
 					)}
 					{...otherProps}         
-					data-dash-is-loading={
-						(loading_state && loading_state.is_loading) || undefined
-					}
 				>
 					{IconTag}
 					{ContentTag}

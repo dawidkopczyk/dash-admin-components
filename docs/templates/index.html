@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/monokai-sublime.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='docs.css') }}" />
+    <title>Dash Admin Components</title>
+  </head>
+  <body>
+    <div class="jumbotron text-center mb-3 main-header">
+      <div class="container">
+        <h1 class="jumbotron-heading display-4">Dash Admin Components</h1>
+        <p class="lead">
+          AdminLTE3 template for Plotly Dash
+        </p>
+        <p>
+          <a
+            role="button"
+            class="btn btn-outline-primary"
+            href="https://github.com/quanteeai/dash-admin-components">
+            GitHub
+          </a>
+          <a
+            role="button"
+            class="btn btn-primary"
+            href="/l/components">
+            Components
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-sm-center pb-5">
+        <div class="col">
+          <h2 class="section-header">Installation</h2>
+          <hr />
+          <h4 class="section-header">PyPI</h4>
+          <p>
+            You can install <em>dash-admin-components</em> with pip:
+          </p>
+          <pre><code class="language-bash">pip install dash-admin-components</code> </pre>
+          <h2 class="section-header mt-5">Getting started</h2>
+          <hr />
+          <p>
+			<em>dash-admin-components</em> relies on <a href=https://github.com/RinteRface/bs4Dash> 
+			shinydashboard implementation</a> of AdminLTE3 template. It comes with preloaded 
+			Bootstrap 4 stylesheet that is fully compatibile with <em>dash-bootstrap-components</em>. 
+          <h2 class="section-header mt-5">Quick demo</h2>
+          <hr />
+          <p>Creating a fully resposive, beautiful dashboard with Plotly Dash has never been easier!
+          The following demo was created with just a couple of code lines (full demo can be found
+          <a href=http://dash-admin-components.opensource.quantee.ai/>here</a>):</p>
+          <div class="demo-layout-container">
+            <iframe class="demo-layout" src="/l/demo-layout"></iframe>
+          </div>
+          <pre><code class="language-python">import dash
+import dash_html_components as html
+import dash_admin_components as dac
+
+# =============================================================================
+# Dash App and Flask Server
+# =============================================================================
+app = dash.Dash(__name__)
+
+# =============================================================================
+# Dash Admin Components
+# =============================================================================
+# Navbar
+right_ui = dac.NavbarDropdown(
+	badge_label="!",
+	badge_color="danger",
+	src="https://quantee.ai",
+	header_text="2 Items",
+	children=[
+	dac.NavbarDropdownItem(
+		children="message 1",
+		date="today"
+	),
+	dac.NavbarDropdownItem(
+		children="message 2",
+		date="yesterday"
+	),
+	]
+)
+							  
+navbar = dac.Navbar(color = "white", 
+					text="I can write text in the navbar!", 
+					children=right_ui)
+
+# Sidebar
+sidebar = dac.Sidebar(
+	dac.SidebarMenu(
+		[
+			dac.SidebarHeader(children="Cards"),
+			dac.SidebarMenuItem(id='tab_cards', label='Basic cards', icon='box'),
+			dac.SidebarMenuItem(id='tab_social_cards', label='Social cards', icon='id-card'),
+			dac.SidebarMenuItem(id='tab_tab_cards', label='Tab cards', icon='image'),
+			dac.SidebarHeader(children="Boxes"),
+			dac.SidebarMenuItem(id='tab_basic_boxes', label='Basic boxes', icon='desktop'),
+			dac.SidebarMenuItem(id='tab_value_boxes', label='Value/Info boxes', icon='suitcase')
+		]
+	),
+	title='Dash Admin',
+	skin="light",
+	color="primary",
+	brand_color="primary",
+	url="https://quantee.ai",
+	src="https://adminlte.io/themes/AdminLTE/dist/img/user2-160x160.jpg",
+	elevation=3,
+	opacity=0.8
+)
+
+# Body
+body = dac.Body(None)
+
+# Controlbar
+controlbar = dac.Controlbar(
+	[
+		html.Br(),
+		html.P("Put different components here!"),
+	],
+	title = "My right sidebar",
+	skin = "light"
+)
+
+# Footer
+footer = dac.Footer(
+	html.A("@DawidKopczyk, Quantee",
+		href = "https://twitter.com/quanteeai", 
+		target = "_blank", 
+	),
+	right_text = "2019"
+)
+
+# =============================================================================
+# App Layout
+# =============================================================================
+app.layout = dac.Page([navbar, sidebar, body, controlbar, footer])
+
+# =============================================================================
+# Run app    
+# =============================================================================
+if __name__ == '__main__':
+    app.run_server(debug=False)
+		  </code></pre>
+          <h2 class="section-header mt-5">Customising the stylesheet</h2>
+          <hr />
+          <p>
+            <em>dash-admin-components</em> comes with preloaded adminlte.css 
+            Bootstrap 4 stylesheet from a CDN. You can overwrite the classes and
+			include your custom stylesheet in your <code>assets/</code> directory, as
+            described in the <a
+            href="https://dash.plot.ly/external-resources">Plotly Dash
+            documentation</a>.
+          </p>
+          <h2 class="section-header mt-5">Contributing</h2>
+          <hr />
+          <p>
+            If you find a bug, or if something is unclear, we
+            encourage you to raise an issue on <a
+            href="https://github.com/quanteeai/dash-admin-components/issues">GitHub</a>.
+          </p>
+          <p>
+            We welcome contributions to
+            <em>dash-admin-components</em>. To contribute, fork
+            the repository and open a <a
+            href="https://github.com/quanteeai/dash-admin-components/pulls">pull
+            request</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

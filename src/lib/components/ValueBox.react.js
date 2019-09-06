@@ -51,7 +51,12 @@ export default class ValueBox extends Component {
 		}
   
 		return(
-			<div className = {"col-sm-"+width}>
+			<div 
+				className = {"col-sm-"+width}
+				data-dash-is-loading={
+					(loading_state && loading_state.is_loading) || undefined
+				}
+			>
 				<div 
 					className={classnames(
 						'small-box',
@@ -60,9 +65,6 @@ export default class ValueBox extends Component {
 						className,
 					)}
 					{...otherProps}         
-					data-dash-is-loading={
-						(loading_state && loading_state.is_loading) || undefined
-					}
 				>
 					{InnerTag} 
 					{IconTag} 

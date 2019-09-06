@@ -64,7 +64,6 @@ export default class NavbarDropdown extends Component {
 			>
 				<a 
 					className="nav-link" 
-					href = "#" 
 					onClick={this.showMenu}
 					{...otherProps}         
 					data-dash-is-loading={

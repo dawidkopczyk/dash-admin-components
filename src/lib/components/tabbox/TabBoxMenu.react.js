@@ -110,7 +110,6 @@ export default class TabBoxMenu extends Component {
 							{'active show': this.state.activeTab === tabId},
 							{disabled: otherProps.disabled}
 						)}
-						href='#'
 						onClick={() => {
 							if (!otherProps.disabled) {
 								this.toggle(tabId);
