@@ -41,7 +41,6 @@ export default class NavbarDropdownItem extends Component {
 						'dropdown-item',
 						className
 					)}
-					href='#'
 					{...otherProps}         
 					data-dash-is-loading={
 						(loading_state && loading_state.is_loading) || undefined

@@ -28,6 +28,7 @@ _current_path = _os.path.dirname(_os.path.abspath(__file__))
 
 _this_module = _sys.modules[__name__]
 
+METADATA_PATH = _os.path.join(_current_path, "metadata.json")
 
 _js_dist = [
     {

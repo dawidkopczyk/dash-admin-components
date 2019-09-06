@@ -34,16 +34,18 @@ export default class SimpleBox extends Component {
 		</div>	
 		
 		return (
-			<div className = {"col-sm-"+width}>
+			<div 
+				className = {"col-sm-"+width}
+				data-dash-is-loading={
+					(loading_state && loading_state.is_loading) || undefined
+				}
+			>
 				<div 
 					className={classnames(
 						'card card-box',
 						className,
 					)}
 					{...otherProps}         
-					data-dash-is-loading={
-						(loading_state && loading_state.is_loading) || undefined
-					}
 				>
 					{SimpleBoxHeader} 
 					{SimpleBoxBody} 
