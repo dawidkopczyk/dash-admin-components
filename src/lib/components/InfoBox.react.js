@@ -20,6 +20,7 @@ export default class InfoBox extends Component {
 			title, 
 			elevation, 
 			color, 
+			icon_color,
 			gradient_color, 
 			icon, 
 			icon_elevation, 
@@ -34,7 +35,8 @@ export default class InfoBox extends Component {
 		IconTag = <span 
 			className={classnames(
 				'info-box-icon',
-				icon_elevation!=null ? `elevation-${icon_elevation}` : false
+				icon_elevation!=null ? `elevation-${icon_elevation}` : false,
+				icon_color!=null ? `bg-${icon_color}` : false
 			)}
 		>
 			<FontAwesomeIcon icon={icon}/>
@@ -136,6 +138,12 @@ InfoBox.propTypes = {
 	*/
 	color: PropTypes.string,
 
+	/**
+	* A color for the info box icon, options: primary, secondary, success, info, warning, danger or NULL.
+    * Default: NULL. 
+	*/
+	icon_color: PropTypes.string,
+	
 	/**
 	* A color for the box, options: primary, secondary, success, info, warning, danger or NULL.
     * Default: NULL. 

@@ -22,6 +22,8 @@ default width of 4 occupies 1/3 of that width. Default: 4.
 - value (string | number; optional): The value to display in the box. Usually a number or short text.
 - color (string; optional): A color for the info box, options: primary, secondary, success, info, warning, danger or NULL.
 Default: NULL.
+- icon_color (string; optional): A color for the info box icon, options: primary, secondary, success, info, warning, danger or NULL.
+Default: NULL.
 - gradient_color (string; optional): A color for the box, options: primary, secondary, success, info, warning, danger or NULL.
 Default: NULL.
 - elevation (number; optional): Box elevation.
@@ -32,12 +34,12 @@ Those keys have the following types:
   - prop_name (string; optional): Holds which property is loading
   - component_name (string; optional): Holds the name of the component that is loading"""
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, style=Component.UNDEFINED, className=Component.UNDEFINED, width=Component.UNDEFINED, title=Component.UNDEFINED, icon=Component.UNDEFINED, value=Component.UNDEFINED, color=Component.UNDEFINED, gradient_color=Component.UNDEFINED, elevation=Component.UNDEFINED, icon_elevation=Component.UNDEFINED, loading_state=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'style', 'className', 'width', 'title', 'icon', 'value', 'color', 'gradient_color', 'elevation', 'icon_elevation', 'loading_state']
+    def __init__(self, children=None, id=Component.UNDEFINED, style=Component.UNDEFINED, className=Component.UNDEFINED, width=Component.UNDEFINED, title=Component.UNDEFINED, icon=Component.UNDEFINED, value=Component.UNDEFINED, color=Component.UNDEFINED, icon_color=Component.UNDEFINED, gradient_color=Component.UNDEFINED, elevation=Component.UNDEFINED, icon_elevation=Component.UNDEFINED, loading_state=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'style', 'className', 'width', 'title', 'icon', 'value', 'color', 'icon_color', 'gradient_color', 'elevation', 'icon_elevation', 'loading_state']
         self._type = 'InfoBox'
         self._namespace = 'dash_admin_components'
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'style', 'className', 'width', 'title', 'icon', 'value', 'color', 'gradient_color', 'elevation', 'icon_elevation', 'loading_state']
+        self.available_properties = ['children', 'id', 'style', 'className', 'width', 'title', 'icon', 'value', 'color', 'icon_color', 'gradient_color', 'elevation', 'icon_elevation', 'loading_state']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

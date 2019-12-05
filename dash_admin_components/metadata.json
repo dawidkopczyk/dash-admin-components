@@ -1264,6 +1264,13 @@
         "required": false,
         "description": "A color for the info box, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
       },
+      "icon_color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A color for the info box icon, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
+      },
       "gradient_color": {
         "type": {
           "name": "string"
