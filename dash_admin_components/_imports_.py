@@ -9,7 +9,6 @@ from .BoxHeader import BoxHeader
 from .Controlbar import Controlbar
 from .Footer import Footer
 from .Icon import Icon
-from .InfoBox import InfoBox
 from .Navbar import Navbar
 from .NavbarDropdown import NavbarDropdown
 from .NavbarDropdownItem import NavbarDropdownItem
@@ -43,7 +42,6 @@ __all__ = [
     "Controlbar",
     "Footer",
     "Icon",
-    "InfoBox",
     "Navbar",
     "NavbarDropdown",
     "NavbarDropdownItem",
