@@ -1180,6 +1180,155 @@
       }
     }
   },
+  "src/lib/components/InfoBox.react.js": {
+    "description": "Boostrap 4 info box.",
+    "displayName": "InfoBox",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The children of this component."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Defines CSS styles which will override styles previously set."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Often used with CSS to style elements with common properties."
+      },
+      "width": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The width of the box, using the Bootstrap grid system. This is\r\nused for row-based layouts. The overall width of a region is 12, so the\r\ndefault width of 4 occupies 1/3 of that width. Default: 4.",
+        "defaultValue": {
+          "value": "4",
+          "computed": false
+        }
+      },
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Box title."
+      },
+      "icon": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "An icon tag. Default: star.",
+        "defaultValue": {
+          "value": "'star'",
+          "computed": false
+        }
+      },
+      "value": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": "The value to display in the box. Usually a number or short text."
+      },
+      "color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A color for the info box, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
+      },
+      "icon_color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A color for the info box icon, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
+      },
+      "gradient_color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A color for the box, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
+      },
+      "elevation": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Box elevation."
+      },
+      "icon_elevation": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Icon elevation compared to the main content. Default: 3.",
+        "defaultValue": {
+          "value": "3",
+          "computed": false
+        }
+      },
+      "loading_state": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Object that holds the loading state object coming from dash-renderer"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+      }
+    }
+  },
   "src/lib/components/navbar/Navbar.react.js": {
     "description": "Create a Boostrap 4 dashboard navbar.",
     "displayName": "Navbar",

@@ -1,6 +1,6 @@
 {
   "name": "dash_admin_components",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "AdminLTE3 component suite for Dash",
   "main": "build/index.js",
   "scripts": {

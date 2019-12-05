@@ -35,7 +35,7 @@ export default class InfoBox extends Component {
 		IconTag = <span 
 			className={classnames(
 				'info-box-icon',
-				icon_elevation!=null ? `elevation-${icon_elevation}` : false
+				icon_elevation!=null ? `elevation-${icon_elevation}` : false,
 				icon_color!=null ? `bg-${icon_color}` : false
 			)}
 		>
