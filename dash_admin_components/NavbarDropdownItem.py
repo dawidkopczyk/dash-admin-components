@@ -15,7 +15,7 @@ components in an app.
 - style (dict; optional): Defines CSS styles which will override styles previously set.
 - className (string; optional): Often used with CSS to style elements with common properties.
 - date (string; optional): A date to display in menu item.
-- icon (string; default 'info-circle'): An icon tag. Default: info-circle.
+- icon (string; default ''): An icon tag. Default: info-circle.
 - n_clicks (number; default 0): An integer that represents the number of times
 that this element has been clicked on.
 - n_clicks_timestamp (number; default -1): An integer that represents the time (in ms since 1970)

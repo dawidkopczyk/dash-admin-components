@@ -2083,7 +2083,7 @@
         "required": false,
         "description": "An icon tag. Default: info-circle.",
         "defaultValue": {
-          "value": "'info-circle'",
+          "value": "''",
           "computed": false
         }
       },
