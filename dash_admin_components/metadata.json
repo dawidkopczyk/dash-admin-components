@@ -1937,7 +1937,7 @@
         "required": false,
         "description": "An icon tag. Default: bell.",
         "defaultValue": {
-          "value": "\"bell\"",
+          "value": "\"\"",
           "computed": false
         }
       },
@@ -1973,7 +1973,7 @@
         "required": false,
         "description": "A text to display in menu header.",
         "defaultValue": {
-          "value": "\"Items\"",
+          "value": "\"\"",
           "computed": false
         }
       },
@@ -1984,7 +1984,7 @@
         "required": false,
         "description": "A text to display in menu footer.",
         "defaultValue": {
-          "value": "\"See more\"",
+          "value": "\"\"",
           "computed": false
         }
       },
