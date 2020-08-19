@@ -14,17 +14,17 @@ in callbacks. The ID needs to be unique across all of the
 components in an app.
 - style (dict; optional): Defines CSS styles which will override styles previously set.
 - className (string; optional): Often used with CSS to style elements with common properties.
-- disable (boolean; optional): Whether sidebar and sidebar toogle should be visible. Default: True.
+- disable (boolean; default False): Whether sidebar and sidebar toogle should be visible. Default: True.
 - title (string; optional): Sidebar title.
-- skin (string; optional): Sidebar skin, options dark or light. Default: dark.
-- color (string; optional): A color for the sidebar, options: primary, secondary, success, info, 
+- skin (string; default "dark"): Sidebar skin, options dark or light. Default: dark.
+- color (string; default "primary"): A color for the sidebar, options: primary, secondary, success, info, 
 warning, danger. Default: primary.
 - brand_color (string; optional): A color for the brand, options: primary, secondary, success, info, 
 warning, danger, white or light-grey. Default: NULL.
-- url (string; optional): Sidebar brand link.
+- url (string; default '#'): Sidebar brand link.
 - src (string; optional): Sidebar brand image.
-- opacity (number; optional): Sidebar opacity. From 0 to 1. Default: 0.8.
-- elevation (number; optional): Sidebar elevation. Default: 4."""
+- opacity (number; default 0.8): Sidebar opacity. From 0 to 1. Default: 0.8.
+- elevation (number; default 4): Sidebar elevation. Default: 4."""
     @_explicitize_args
     def __init__(self, children=None, id=Component.UNDEFINED, style=Component.UNDEFINED, className=Component.UNDEFINED, disable=Component.UNDEFINED, title=Component.UNDEFINED, skin=Component.UNDEFINED, color=Component.UNDEFINED, brand_color=Component.UNDEFINED, url=Component.UNDEFINED, src=Component.UNDEFINED, opacity=Component.UNDEFINED, elevation=Component.UNDEFINED, **kwargs):
         self._prop_names = ['children', 'id', 'style', 'className', 'disable', 'title', 'skin', 'color', 'brand_color', 'url', 'src', 'opacity', 'elevation']

@@ -18,14 +18,14 @@ components in an app.
 - color (string; optional): A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.
 Default: NULL.
 - elevation (number; optional): Box elevation.
-- solid_header (boolean; optional): Should the header be shown with a solid color background. Default: False.
+- solid_header (boolean; default False): Should the header be shown with a solid color background. Default: False.
 - gradient_color (string; optional): A color for the box, options: primary, secondary, success, info, warning, danger or NULL.
 Default: NULL.
-- width (number; optional): The width of the box, using the Bootstrap grid system. This is
+- width (number; default 6): The width of the box, using the Bootstrap grid system. This is
 used for row-based layouts. The overall width of a region is 12, so the
 default width of 4 occupies 1/3 of that width. Default: 6.
-- collapsed (boolean; optional): Whether to start collapsed. Default: False.
-- loading_state (optional): Object that holds the loading state object coming from dash-renderer. loading_state has the following type: dict containing keys 'is_loading', 'prop_name', 'component_name'.
+- collapsed (boolean; default False): Whether to start collapsed. Default: False.
+- loading_state (dict; optional): Object that holds the loading state object coming from dash-renderer. loading_state has the following type: dict containing keys 'is_loading', 'prop_name', 'component_name'.
 Those keys have the following types:
   - is_loading (boolean; optional): Determines if the component is loading or not
   - prop_name (string; optional): Holds which property is loading

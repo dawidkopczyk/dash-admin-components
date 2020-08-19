@@ -9,7 +9,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "children": {
         "type": {
@@ -61,631 +61,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
-      }
-    }
-  },
-  "src/lib/components/box/Box.react.js": {
-    "description": "Create a Boostrap 4 box. \r\nThe children of this component are: BoxHeader, BoxBody, BoxFooter.",
-    "displayName": "Box",
-    "methods": [],
-    "props": {
-      "id": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
-      },
-      "children": {
-        "type": {
-          "name": "node"
-        },
-        "required": false,
-        "description": "The children of this component."
-      },
-      "style": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": "Defines CSS styles which will override styles previously set."
-      },
-      "className": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Often used with CSS to style elements with common properties."
-      },
-      "color": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
-      },
-      "elevation": {
-        "type": {
-          "name": "number"
-        },
-        "required": false,
-        "description": "Box elevation."
-      },
-      "solid_header": {
-        "type": {
-          "name": "bool"
-        },
-        "required": false,
-        "description": "Should the header be shown with a solid color background. Default: False.",
-        "defaultValue": {
-          "value": "false",
-          "computed": false
-        }
-      },
-      "gradient_color": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "A color for the box, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
-      },
-      "width": {
-        "type": {
-          "name": "number"
-        },
-        "required": false,
-        "description": "The width of the box, using the Bootstrap grid system. This is\r\nused for row-based layouts. The overall width of a region is 12, so the\r\ndefault width of 4 occupies 1/3 of that width. Default: 6.",
-        "defaultValue": {
-          "value": "6",
-          "computed": false
-        }
-      },
-      "collapsed": {
-        "type": {
-          "name": "bool"
-        },
-        "required": false,
-        "description": "Whether to start collapsed. Default: False.",
-        "defaultValue": {
-          "value": "false",
-          "computed": false
-        }
-      },
-      "loading_state": {
-        "type": {
-          "name": "shape",
-          "value": {
-            "is_loading": {
-              "name": "bool",
-              "description": "Determines if the component is loading or not",
-              "required": false
-            },
-            "prop_name": {
-              "name": "string",
-              "description": "Holds which property is loading",
-              "required": false
-            },
-            "component_name": {
-              "name": "string",
-              "description": "Holds the name of the component that is loading",
-              "required": false
-            }
-          }
-        },
-        "required": false,
-        "description": "Object that holds the loading state object coming from dash-renderer"
-      },
-      "setProps": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
-      }
-    }
-  },
-  "src/lib/components/box/BoxBody.react.js": {
-    "description": "Create a Boostrap 4 box body.",
-    "displayName": "BoxBody",
-    "methods": [],
-    "props": {
-      "id": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
-      },
-      "children": {
-        "type": {
-          "name": "node"
-        },
-        "required": false,
-        "description": "The children of this component."
-      },
-      "style": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": "Defines CSS styles which will override styles previously set."
-      },
-      "className": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Often used with CSS to style elements with common properties."
-      },
-      "overflow": {
-        "type": {
-          "name": "bool"
-        },
-        "required": false,
-        "description": "Whether to enable overflow in the card body and footer. Default: False.",
-        "defaultValue": {
-          "value": "false",
-          "computed": false
-        }
-      },
-      "loading_state": {
-        "type": {
-          "name": "shape",
-          "value": {
-            "is_loading": {
-              "name": "bool",
-              "description": "Determines if the component is loading or not",
-              "required": false
-            },
-            "prop_name": {
-              "name": "string",
-              "description": "Holds which property is loading",
-              "required": false
-            },
-            "component_name": {
-              "name": "string",
-              "description": "Holds the name of the component that is loading",
-              "required": false
-            }
-          }
-        },
-        "required": false,
-        "description": "Object that holds the loading state object coming from dash-renderer"
-      },
-      "setProps": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
-      }
-    }
-  },
-  "src/lib/components/box/BoxDropdown.react.js": {
-    "description": "Create a Boostrap 4 box dropdown button.",
-    "displayName": "BoxDropdown",
-    "methods": [
-      {
-        "name": "showMenu",
-        "docblock": null,
-        "modifiers": [],
-        "params": [
-          {
-            "name": "event",
-            "type": null
-          }
-        ],
-        "returns": null
-      },
-      {
-        "name": "closeMenu",
-        "docblock": null,
-        "modifiers": [],
-        "params": [
-          {
-            "name": "event",
-            "type": null
-          }
-        ],
-        "returns": null
-      }
-    ],
-    "props": {
-      "id": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
-      },
-      "children": {
-        "type": {
-          "name": "node"
-        },
-        "required": false,
-        "description": "The children of this component."
-      },
-      "style": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": "Defines CSS styles which will override styles previously set."
-      },
-      "className": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Often used with CSS to style elements with common properties."
-      },
-      "dropdown_icon": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "An icon tag. Default: wrench.",
-        "defaultValue": {
-          "value": "\"wrench\"",
-          "computed": false
-        }
-      },
-      "loading_state": {
-        "type": {
-          "name": "shape",
-          "value": {
-            "is_loading": {
-              "name": "bool",
-              "description": "Determines if the component is loading or not",
-              "required": false
-            },
-            "prop_name": {
-              "name": "string",
-              "description": "Holds which property is loading",
-              "required": false
-            },
-            "component_name": {
-              "name": "string",
-              "description": "Holds the name of the component that is loading",
-              "required": false
-            }
-          }
-        },
-        "required": false,
-        "description": "Object that holds the loading state object coming from dash-renderer"
-      },
-      "setProps": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
-      }
-    }
-  },
-  "src/lib/components/box/BoxDropdownDivider.react.js": {
-    "description": "Bootstrap 4 box dropdown divider.",
-    "displayName": "BoxDropdownDivider",
-    "methods": [],
-    "props": {
-      "id": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
-      },
-      "className": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Often used with CSS to style elements with common properties."
-      },
-      "setProps": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
-      }
-    }
-  },
-  "src/lib/components/box/BoxDropdownItem.react.js": {
-    "description": "Bootstrap 4 box dropdown item.",
-    "displayName": "BoxDropdownItem",
-    "methods": [
-      {
-        "name": "incrementClicks",
-        "docblock": null,
-        "modifiers": [],
-        "params": [],
-        "returns": null
-      }
-    ],
-    "props": {
-      "id": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
-      },
-      "children": {
-        "type": {
-          "name": "node"
-        },
-        "required": false,
-        "description": "The children of this component."
-      },
-      "style": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": "Defines CSS styles which will override styles previously set."
-      },
-      "className": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Often used with CSS to style elements with common properties."
-      },
-      "url": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Optional link."
-      },
-      "n_clicks": {
-        "type": {
-          "name": "number"
-        },
-        "required": false,
-        "description": "An integer that represents the number of times\r\nthat this element has been clicked on.",
-        "defaultValue": {
-          "value": "0",
-          "computed": false
-        }
-      },
-      "n_clicks_timestamp": {
-        "type": {
-          "name": "number"
-        },
-        "required": false,
-        "description": "An integer that represents the time (in ms since 1970)\r\nat which n_clicks changed. This can be used to tell\r\nwhich button was changed most recently.",
-        "defaultValue": {
-          "value": "-1",
-          "computed": false
-        }
-      },
-      "loading_state": {
-        "type": {
-          "name": "shape",
-          "value": {
-            "is_loading": {
-              "name": "bool",
-              "description": "Determines if the component is loading or not",
-              "required": false
-            },
-            "prop_name": {
-              "name": "string",
-              "description": "Holds which property is loading",
-              "required": false
-            },
-            "component_name": {
-              "name": "string",
-              "description": "Holds the name of the component that is loading",
-              "required": false
-            }
-          }
-        },
-        "required": false,
-        "description": "Object that holds the loading state object coming from dash-renderer"
-      },
-      "setProps": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
-      }
-    }
-  },
-  "src/lib/components/box/BoxFooter.react.js": {
-    "description": "Create a Boostrap 4 box footer.",
-    "displayName": "BoxFooter",
-    "methods": [],
-    "props": {
-      "id": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
-      },
-      "children": {
-        "type": {
-          "name": "node"
-        },
-        "required": false,
-        "description": "The children of this component."
-      },
-      "style": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": "Defines CSS styles which will override styles previously set."
-      },
-      "className": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Often used with CSS to style elements with common properties."
-      },
-      "overflow": {
-        "type": {
-          "name": "bool"
-        },
-        "required": false,
-        "description": "Whether to enable overflow in the card body and footer. Default: False.",
-        "defaultValue": {
-          "value": "false",
-          "computed": false
-        }
-      },
-      "loading_state": {
-        "type": {
-          "name": "shape",
-          "value": {
-            "is_loading": {
-              "name": "bool",
-              "description": "Determines if the component is loading or not",
-              "required": false
-            },
-            "prop_name": {
-              "name": "string",
-              "description": "Holds which property is loading",
-              "required": false
-            },
-            "component_name": {
-              "name": "string",
-              "description": "Holds the name of the component that is loading",
-              "required": false
-            }
-          }
-        },
-        "required": false,
-        "description": "Object that holds the loading state object coming from dash-renderer"
-      },
-      "setProps": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
-      }
-    }
-  },
-  "src/lib/components/box/BoxHeader.react.js": {
-    "description": "Create a Boostrap 4 box header.",
-    "displayName": "BoxHeader",
-    "methods": [],
-    "props": {
-      "id": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
-      },
-      "children": {
-        "type": {
-          "name": "node"
-        },
-        "required": false,
-        "description": "The children of this component."
-      },
-      "style": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": "Defines CSS styles which will override styles previously set."
-      },
-      "className": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Often used with CSS to style elements with common properties."
-      },
-      "title": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Box title.",
-        "defaultValue": {
-          "value": "\"\\u200C\"",
-          "computed": false
-        }
-      },
-      "header_border": {
-        "type": {
-          "name": "bool"
-        },
-        "required": false,
-        "description": "Whether to display a border between the header and body. Default: True.",
-        "defaultValue": {
-          "value": "true",
-          "computed": false
-        }
-      },
-      "collapsible": {
-        "type": {
-          "name": "bool"
-        },
-        "required": false,
-        "description": "If True, display a button in the upper right that allows\r\nthe user to collapse the box. Default: True.",
-        "defaultValue": {
-          "value": "true",
-          "computed": false
-        }
-      },
-      "collapsed": {
-        "type": {
-          "name": "bool"
-        },
-        "required": false,
-        "description": "Whether to start collapsed. Default: False."
-      },
-      "closable": {
-        "type": {
-          "name": "bool"
-        },
-        "required": false,
-        "description": "If True, display a button in the upper right that allows the user to close the box.\r\nDefault: False.",
-        "defaultValue": {
-          "value": "false",
-          "computed": false
-        }
-      },
-      "loading_state": {
-        "type": {
-          "name": "shape",
-          "value": {
-            "is_loading": {
-              "name": "bool",
-              "description": "Determines if the component is loading or not",
-              "required": false
-            },
-            "prop_name": {
-              "name": "string",
-              "description": "Holds which property is loading",
-              "required": false
-            },
-            "component_name": {
-              "name": "string",
-              "description": "Holds the name of the component that is loading",
-              "required": false
-            }
-          }
-        },
-        "required": false,
-        "description": "Object that holds the loading state object coming from dash-renderer"
-      },
-      "setProps": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -699,7 +75,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "children": {
         "type": {
@@ -780,7 +156,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -794,7 +170,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "children": {
         "type": {
@@ -853,7 +229,1191 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      }
+    }
+  },
+  "src/lib/components/InfoBox.react.js": {
+    "description": "Boostrap 4 info box.",
+    "displayName": "InfoBox",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The children of this component."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Defines CSS styles which will override styles previously set."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Often used with CSS to style elements with common properties."
+      },
+      "width": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The width of the box, using the Bootstrap grid system. This is\nused for row-based layouts. The overall width of a region is 12, so the\ndefault width of 4 occupies 1/3 of that width. Default: 4.",
+        "defaultValue": {
+          "value": "4",
+          "computed": false
+        }
+      },
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Box title."
+      },
+      "icon": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "An icon tag. Default: star.",
+        "defaultValue": {
+          "value": "'star'",
+          "computed": false
+        }
+      },
+      "value": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": "The value to display in the box. Usually a number or short text."
+      },
+      "color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A color for the info box, options: primary, secondary, success, info, warning, danger or NULL.\nDefault: NULL."
+      },
+      "icon_color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A color for the info box icon, options: primary, secondary, success, info, warning, danger or NULL.\nDefault: NULL."
+      },
+      "gradient_color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A color for the box, options: primary, secondary, success, info, warning, danger or NULL.\nDefault: NULL."
+      },
+      "elevation": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Box elevation."
+      },
+      "icon_elevation": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Icon elevation compared to the main content. Default: 3.",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "loading_state": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Object that holds the loading state object coming from dash-renderer"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      }
+    }
+  },
+  "src/lib/components/Page.react.js": {
+    "description": "Create a Boostrap 4 dashboard page. \nThe children of this component are: Navbar, Sidebar, Body, Controlbar and Footer.",
+    "displayName": "Page",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The children of this component."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Defines CSS styles which will override styles previously set."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Often used with CSS to style elements with common properties."
+      },
+      "loading_state": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Object that holds the loading state object coming from dash-renderer"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      }
+    }
+  },
+  "src/lib/components/SimpleBox.react.js": {
+    "description": "Boostrap 4 simple box.",
+    "displayName": "SimpleBox",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The children of this component."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Defines CSS styles which will override styles previously set."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Often used with CSS to style elements with common properties."
+      },
+      "width": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The width of the box, using the Bootstrap grid system. This is\nused for row-based layouts. The overall width of a region is 12, so the\ndefault width of 4 occupies 1/3 of that width. Default: 6.",
+        "defaultValue": {
+          "value": "6",
+          "computed": false
+        }
+      },
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Box title."
+      },
+      "loading_state": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Object that holds the loading state object coming from dash-renderer"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      }
+    }
+  },
+  "src/lib/components/UserCard.react.js": {
+    "description": "AdminLTE3 widget user card.",
+    "displayName": "UserCard",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "Defines CSS styles which will override styles previously set."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Defines CSS styles which will override styles previously set."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Often used with CSS to style elements with common properties."
+      },
+      "type": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "User card type options 2 or NULL."
+      },
+      "src": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "User image url or path."
+      },
+      "elevation": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "User card elevation."
+      },
+      "image_elevation": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "User card image elevation (numeric)."
+      },
+      "color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A color for the user card, options: primary, secondary, success, info, warning, danger or NULL.\nDefault: NULL."
+      },
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "User card title."
+      },
+      "subtitle": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Subtitle text."
+      },
+      "width": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The width of the box, using the Bootstrap grid system. This is\nused for row-based layouts. The overall width of a region is 12, so the\ndefault width of 4 occupies 1/3 of that width. Default: 6.",
+        "defaultValue": {
+          "value": "6",
+          "computed": false
+        }
+      },
+      "loading_state": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Object that holds the loading state object coming from dash-renderer"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      }
+    }
+  },
+  "src/lib/components/ValueBox.react.js": {
+    "description": "Boostrap 4 value box.",
+    "displayName": "ValueBox",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Defines CSS styles which will override styles previously set."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Often used with CSS to style elements with common properties."
+      },
+      "value": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "string"
+            },
+            {
+              "name": "number"
+            }
+          ]
+        },
+        "required": false,
+        "description": "The value to display in the box. Usually a number or short text."
+      },
+      "width": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The width of the box, using the Bootstrap grid system. This is\nused for row-based layouts. The overall width of a region is 12, so the\ndefault width of 4 occupies 1/3 of that width. Default: 3.",
+        "defaultValue": {
+          "value": "3",
+          "computed": false
+        }
+      },
+      "color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A color for the value box, options: primary, secondary, success, info, warning, danger or NULL.\nDefault: NULL."
+      },
+      "icon": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "An icon tag. Default: user.",
+        "defaultValue": {
+          "value": "'user'",
+          "computed": false
+        }
+      },
+      "subtitle": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Subtitle text."
+      },
+      "href": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "An optional URL to link to."
+      },
+      "footer_text": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Text displayed in footer.",
+        "defaultValue": {
+          "value": "'See more '",
+          "computed": false
+        }
+      },
+      "elevation": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Box elevation."
+      },
+      "loading_state": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Object that holds the loading state object coming from dash-renderer"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      }
+    }
+  },
+  "src/lib/components/box/Box.react.js": {
+    "description": "Create a Boostrap 4 box. \nThe children of this component are: BoxHeader, BoxBody, BoxFooter.",
+    "displayName": "Box",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The children of this component."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Defines CSS styles which will override styles previously set."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Often used with CSS to style elements with common properties."
+      },
+      "color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.\nDefault: NULL."
+      },
+      "elevation": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Box elevation."
+      },
+      "solid_header": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Should the header be shown with a solid color background. Default: False.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "gradient_color": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A color for the box, options: primary, secondary, success, info, warning, danger or NULL.\nDefault: NULL."
+      },
+      "width": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The width of the box, using the Bootstrap grid system. This is\nused for row-based layouts. The overall width of a region is 12, so the\ndefault width of 4 occupies 1/3 of that width. Default: 6.",
+        "defaultValue": {
+          "value": "6",
+          "computed": false
+        }
+      },
+      "collapsed": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to start collapsed. Default: False.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "loading_state": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Object that holds the loading state object coming from dash-renderer"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      }
+    }
+  },
+  "src/lib/components/box/BoxBody.react.js": {
+    "description": "Create a Boostrap 4 box body.",
+    "displayName": "BoxBody",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The children of this component."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Defines CSS styles which will override styles previously set."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Often used with CSS to style elements with common properties."
+      },
+      "overflow": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to enable overflow in the card body and footer. Default: False.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "loading_state": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Object that holds the loading state object coming from dash-renderer"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      }
+    }
+  },
+  "src/lib/components/box/BoxDropdown.react.js": {
+    "description": "Create a Boostrap 4 box dropdown button.",
+    "displayName": "BoxDropdown",
+    "methods": [
+      {
+        "name": "showMenu",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "event",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "closeMenu",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "event",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The children of this component."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Defines CSS styles which will override styles previously set."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Often used with CSS to style elements with common properties."
+      },
+      "dropdown_icon": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "An icon tag. Default: wrench.",
+        "defaultValue": {
+          "value": "\"wrench\"",
+          "computed": false
+        }
+      },
+      "loading_state": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Object that holds the loading state object coming from dash-renderer"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      }
+    }
+  },
+  "src/lib/components/box/BoxDropdownDivider.react.js": {
+    "description": "Bootstrap 4 box dropdown divider.",
+    "displayName": "BoxDropdownDivider",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Often used with CSS to style elements with common properties."
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      }
+    }
+  },
+  "src/lib/components/box/BoxDropdownItem.react.js": {
+    "description": "Bootstrap 4 box dropdown item.",
+    "displayName": "BoxDropdownItem",
+    "methods": [
+      {
+        "name": "incrementClicks",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The children of this component."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Defines CSS styles which will override styles previously set."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Often used with CSS to style elements with common properties."
+      },
+      "url": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Optional link."
+      },
+      "n_clicks": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "An integer that represents the number of times\nthat this element has been clicked on.",
+        "defaultValue": {
+          "value": "0",
+          "computed": false
+        }
+      },
+      "n_clicks_timestamp": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "An integer that represents the time (in ms since 1970)\nat which n_clicks changed. This can be used to tell\nwhich button was changed most recently.",
+        "defaultValue": {
+          "value": "-1",
+          "computed": false
+        }
+      },
+      "loading_state": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Object that holds the loading state object coming from dash-renderer"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      }
+    }
+  },
+  "src/lib/components/box/BoxFooter.react.js": {
+    "description": "Create a Boostrap 4 box footer.",
+    "displayName": "BoxFooter",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The children of this component."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Defines CSS styles which will override styles previously set."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Often used with CSS to style elements with common properties."
+      },
+      "overflow": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to enable overflow in the card body and footer. Default: False.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "loading_state": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Object that holds the loading state object coming from dash-renderer"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
+      }
+    }
+  },
+  "src/lib/components/box/BoxHeader.react.js": {
+    "description": "Create a Boostrap 4 box header.",
+    "displayName": "BoxHeader",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
+      },
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The children of this component."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Defines CSS styles which will override styles previously set."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Often used with CSS to style elements with common properties."
+      },
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Box title.",
+        "defaultValue": {
+          "value": "\"\\u200C\"",
+          "computed": false
+        }
+      },
+      "header_border": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to display a border between the header and body. Default: True.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "collapsible": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If True, display a button in the upper right that allows\nthe user to collapse the box. Default: True.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "collapsed": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to start collapsed. Default: False."
+      },
+      "closable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "If True, display a button in the upper right that allows the user to close the box.\nDefault: False.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "loading_state": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "is_loading": {
+              "name": "bool",
+              "description": "Determines if the component is loading or not",
+              "required": false
+            },
+            "prop_name": {
+              "name": "string",
+              "description": "Holds which property is loading",
+              "required": false
+            },
+            "component_name": {
+              "name": "string",
+              "description": "Holds the name of the component that is loading",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Object that holds the loading state object coming from dash-renderer"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -867,7 +1427,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "border": {
         "type": {
@@ -1176,156 +1736,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
-      }
-    }
-  },
-  "src/lib/components/InfoBox.react.js": {
-    "description": "Boostrap 4 info box.",
-    "displayName": "InfoBox",
-    "methods": [],
-    "props": {
-      "id": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
-      },
-      "children": {
-        "type": {
-          "name": "node"
-        },
-        "required": false,
-        "description": "The children of this component."
-      },
-      "style": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": "Defines CSS styles which will override styles previously set."
-      },
-      "className": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Often used with CSS to style elements with common properties."
-      },
-      "width": {
-        "type": {
-          "name": "number"
-        },
-        "required": false,
-        "description": "The width of the box, using the Bootstrap grid system. This is\r\nused for row-based layouts. The overall width of a region is 12, so the\r\ndefault width of 4 occupies 1/3 of that width. Default: 4.",
-        "defaultValue": {
-          "value": "4",
-          "computed": false
-        }
-      },
-      "title": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Box title."
-      },
-      "icon": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "An icon tag. Default: star.",
-        "defaultValue": {
-          "value": "'star'",
-          "computed": false
-        }
-      },
-      "value": {
-        "type": {
-          "name": "union",
-          "value": [
-            {
-              "name": "string"
-            },
-            {
-              "name": "number"
-            }
-          ]
-        },
-        "required": false,
-        "description": "The value to display in the box. Usually a number or short text."
-      },
-      "color": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "A color for the info box, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
-      },
-      "icon_color": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "A color for the info box icon, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
-      },
-      "gradient_color": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "A color for the box, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
-      },
-      "elevation": {
-        "type": {
-          "name": "number"
-        },
-        "required": false,
-        "description": "Box elevation."
-      },
-      "icon_elevation": {
-        "type": {
-          "name": "number"
-        },
-        "required": false,
-        "description": "Icon elevation compared to the main content. Default: 3.",
-        "defaultValue": {
-          "value": "3",
-          "computed": false
-        }
-      },
-      "loading_state": {
-        "type": {
-          "name": "shape",
-          "value": {
-            "is_loading": {
-              "name": "bool",
-              "description": "Determines if the component is loading or not",
-              "required": false
-            },
-            "prop_name": {
-              "name": "string",
-              "description": "Holds which property is loading",
-              "required": false
-            },
-            "component_name": {
-              "name": "string",
-              "description": "Holds the name of the component that is loading",
-              "required": false
-            }
-          }
-        },
-        "required": false,
-        "description": "Object that holds the loading state object coming from dash-renderer"
-      },
-      "setProps": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -1339,7 +1750,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "children": {
         "type": {
@@ -1378,7 +1789,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "A color for the navbar, options: primary, secondary, success, info, \r\nwarning, danger, white or light-grey. Default: white.",
+        "description": "A color for the navbar, options: primary, secondary, success, info, \nwarning, danger, white or light-grey. Default: white.",
         "defaultValue": {
           "value": "\"white\"",
           "computed": false
@@ -1457,7 +1868,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -1496,7 +1907,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "children": {
         "type": {
@@ -1535,7 +1946,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "A color for the badge, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
+        "description": "A color for the badge, options: primary, secondary, success, info, warning, danger or NULL.\nDefault: NULL."
       },
       "badge_label": {
         "type": {
@@ -1613,7 +2024,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -1635,7 +2046,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "children": {
         "type": {
@@ -1681,7 +2092,7 @@
           "name": "number"
         },
         "required": false,
-        "description": "An integer that represents the number of times\r\nthat this element has been clicked on.",
+        "description": "An integer that represents the number of times\nthat this element has been clicked on.",
         "defaultValue": {
           "value": "0",
           "computed": false
@@ -1692,7 +2103,7 @@
           "name": "number"
         },
         "required": false,
-        "description": "An integer that represents the time (in ms since 1970)\r\nat which n_clicks changed. This can be used to tell\r\nwhich button was changed most recently.",
+        "description": "An integer that represents the time (in ms since 1970)\nat which n_clicks changed. This can be used to tell\nwhich button was changed most recently.",
         "defaultValue": {
           "value": "-1",
           "computed": false
@@ -1727,73 +2138,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
-      }
-    }
-  },
-  "src/lib/components/Page.react.js": {
-    "description": "Create a Boostrap 4 dashboard page. \r\nThe children of this component are: Navbar, Sidebar, Body, Controlbar and Footer.",
-    "displayName": "Page",
-    "methods": [],
-    "props": {
-      "id": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
-      },
-      "children": {
-        "type": {
-          "name": "node"
-        },
-        "required": false,
-        "description": "The children of this component."
-      },
-      "style": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": "Defines CSS styles which will override styles previously set."
-      },
-      "className": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Often used with CSS to style elements with common properties."
-      },
-      "loading_state": {
-        "type": {
-          "name": "shape",
-          "value": {
-            "is_loading": {
-              "name": "bool",
-              "description": "Determines if the component is loading or not",
-              "required": false
-            },
-            "prop_name": {
-              "name": "string",
-              "description": "Holds which property is loading",
-              "required": false
-            },
-            "component_name": {
-              "name": "string",
-              "description": "Holds the name of the component that is loading",
-              "required": false
-            }
-          }
-        },
-        "required": false,
-        "description": "Object that holds the loading state object coming from dash-renderer"
-      },
-      "setProps": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -1807,7 +2152,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "children": {
         "type": {
@@ -1864,7 +2209,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "A color for the sidebar, options: primary, secondary, success, info, \r\nwarning, danger. Default: primary.",
+        "description": "A color for the sidebar, options: primary, secondary, success, info, \nwarning, danger. Default: primary.",
         "defaultValue": {
           "value": "\"primary\"",
           "computed": false
@@ -1875,7 +2220,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "A color for the brand, options: primary, secondary, success, info, \r\nwarning, danger, white or light-grey. Default: NULL."
+        "description": "A color for the brand, options: primary, secondary, success, info, \nwarning, danger, white or light-grey. Default: NULL."
       },
       "url": {
         "type": {
@@ -1922,7 +2267,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -1944,7 +2289,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "style": {
         "type": {
@@ -1990,7 +2335,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "A color for the sidebar button, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
+        "description": "A color for the sidebar button, options: primary, secondary, success, info, warning, danger or NULL.\nDefault: NULL."
       },
       "download": {
         "type": {
@@ -2018,7 +2363,7 @@
           "name": "number"
         },
         "required": false,
-        "description": "An integer that represents the number of times\r\nthat this element has been clicked on.",
+        "description": "An integer that represents the number of times\nthat this element has been clicked on.",
         "defaultValue": {
           "value": "0",
           "computed": false
@@ -2029,7 +2374,7 @@
           "name": "number"
         },
         "required": false,
-        "description": "An integer that represents the time (in ms since 1970)\r\nat which n_clicks changed. This can be used to tell\r\nwhich button was changed most recently.",
+        "description": "An integer that represents the time (in ms since 1970)\nat which n_clicks changed. This can be used to tell\nwhich button was changed most recently.",
         "defaultValue": {
           "value": "-1",
           "computed": false
@@ -2064,7 +2409,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -2078,7 +2423,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "children": {
         "type": {
@@ -2130,7 +2475,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -2144,7 +2489,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "children": {
         "type": {
@@ -2196,7 +2541,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -2218,7 +2563,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "children": {
         "type": {
@@ -2293,7 +2638,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "A color for the badge, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
+        "description": "A color for the badge, options: primary, secondary, success, info, warning, danger or NULL.\nDefault: NULL."
       },
       "badge_label": {
         "type": {
@@ -2307,7 +2652,7 @@
           "name": "number"
         },
         "required": false,
-        "description": "An integer that represents the number of times\r\nthat this element has been clicked on.",
+        "description": "An integer that represents the number of times\nthat this element has been clicked on.",
         "defaultValue": {
           "value": "0",
           "computed": false
@@ -2318,7 +2663,7 @@
           "name": "number"
         },
         "required": false,
-        "description": "An integer that represents the time (in ms since 1970)\r\nat which n_clicks changed. This can be used to tell\r\nwhich button was changed most recently.",
+        "description": "An integer that represents the time (in ms since 1970)\nat which n_clicks changed. This can be used to tell\nwhich button was changed most recently.",
         "defaultValue": {
           "value": "-1",
           "computed": false
@@ -2353,7 +2698,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -2375,7 +2720,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "style": {
         "type": {
@@ -2432,7 +2777,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "A color for the badge, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
+        "description": "A color for the badge, options: primary, secondary, success, info, warning, danger or NULL.\nDefault: NULL."
       },
       "badge_label": {
         "type": {
@@ -2446,7 +2791,7 @@
           "name": "number"
         },
         "required": false,
-        "description": "An integer that represents the number of times\r\nthat this element has been clicked on.",
+        "description": "An integer that represents the number of times\nthat this element has been clicked on.",
         "defaultValue": {
           "value": "0",
           "computed": false
@@ -2457,7 +2802,7 @@
           "name": "number"
         },
         "required": false,
-        "description": "An integer that represents the time (in ms since 1970)\r\nat which n_clicks changed. This can be used to tell\r\nwhich button was changed most recently.",
+        "description": "An integer that represents the time (in ms since 1970)\nat which n_clicks changed. This can be used to tell\nwhich button was changed most recently.",
         "defaultValue": {
           "value": "-1",
           "computed": false
@@ -2492,96 +2837,12 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
-      }
-    }
-  },
-  "src/lib/components/SimpleBox.react.js": {
-    "description": "Boostrap 4 simple box.",
-    "displayName": "SimpleBox",
-    "methods": [],
-    "props": {
-      "id": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
-      },
-      "children": {
-        "type": {
-          "name": "node"
-        },
-        "required": false,
-        "description": "The children of this component."
-      },
-      "style": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": "Defines CSS styles which will override styles previously set."
-      },
-      "className": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Often used with CSS to style elements with common properties."
-      },
-      "width": {
-        "type": {
-          "name": "number"
-        },
-        "required": false,
-        "description": "The width of the box, using the Bootstrap grid system. This is\r\nused for row-based layouts. The overall width of a region is 12, so the\r\ndefault width of 4 occupies 1/3 of that width. Default: 6.",
-        "defaultValue": {
-          "value": "6",
-          "computed": false
-        }
-      },
-      "title": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Box title."
-      },
-      "loading_state": {
-        "type": {
-          "name": "shape",
-          "value": {
-            "is_loading": {
-              "name": "bool",
-              "description": "Determines if the component is loading or not",
-              "required": false
-            },
-            "prop_name": {
-              "name": "string",
-              "description": "Holds which property is loading",
-              "required": false
-            },
-            "component_name": {
-              "name": "string",
-              "description": "Holds the name of the component that is loading",
-              "required": false
-            }
-          }
-        },
-        "required": false,
-        "description": "Object that holds the loading state object coming from dash-renderer"
-      },
-      "setProps": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
   "src/lib/components/tabbox/TabBox.react.js": {
-    "description": "Create a Boostrap 4 tab box. \r\nThe children of this component are: BoxHeader, BoxBody, BoxFooter.",
+    "description": "Create a Boostrap 4 tab box. \nThe children of this component are: BoxHeader, BoxBody, BoxFooter.",
     "displayName": "TabBox",
     "methods": [],
     "props": {
@@ -2590,7 +2851,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "children": {
         "type": {
@@ -2618,7 +2879,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
+        "description": "A color for the box header, options: primary, secondary, success, info, warning, danger or NULL.\nDefault: NULL."
       },
       "elevation": {
         "type": {
@@ -2643,14 +2904,14 @@
           "name": "string"
         },
         "required": false,
-        "description": "A color for the box, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
+        "description": "A color for the box, options: primary, secondary, success, info, warning, danger or NULL.\nDefault: NULL."
       },
       "width": {
         "type": {
           "name": "number"
         },
         "required": false,
-        "description": "The width of the box, using the Bootstrap grid system. This is\r\nused for row-based layouts. The overall width of a region is 12, so the\r\ndefault width of 4 occupies 1/3 of that width. Default: 6.",
+        "description": "The width of the box, using the Bootstrap grid system. This is\nused for row-based layouts. The overall width of a region is 12, so the\ndefault width of 4 occupies 1/3 of that width. Default: 6.",
         "defaultValue": {
           "value": "6",
           "computed": false
@@ -2696,7 +2957,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -2710,7 +2971,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "children": {
         "type": {
@@ -2773,7 +3034,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -2787,7 +3048,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "children": {
         "type": {
@@ -2837,7 +3098,7 @@
           "name": "bool"
         },
         "required": false,
-        "description": "If True, display a button in the upper right that allows\r\nthe user to collapse the box. Default: True.",
+        "description": "If True, display a button in the upper right that allows\nthe user to collapse the box. Default: True.",
         "defaultValue": {
           "value": "true",
           "computed": false
@@ -2855,7 +3116,7 @@
           "name": "bool"
         },
         "required": false,
-        "description": "If True, display a button in the upper right that allows the user to close the box.\r\nDefault: False.",
+        "description": "If True, display a button in the upper right that allows the user to close the box.\nDefault: False.",
         "defaultValue": {
           "value": "false",
           "computed": false
@@ -2890,7 +3151,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -2924,7 +3185,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "children": {
         "type": {
@@ -2983,7 +3244,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -2997,14 +3258,14 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "style": {
         "type": {
           "name": "object"
         },
         "required": false,
-        "description": "Defines CSS styles which will override styles previously set. The styles\r\nset here apply to the content of the Tab"
+        "description": "Defines CSS styles which will override styles previously set. The styles\nset here apply to the content of the Tab"
       },
       "className": {
         "type": {
@@ -3018,7 +3279,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "A color for the menu item, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
+        "description": "A color for the menu item, options: primary, secondary, success, info, warning, danger or NULL.\nDefault: NULL."
       },
       "label": {
         "type": {
@@ -3032,7 +3293,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "Optional identifier for MenuItem used for determining which MenuItem is visible\r\nif not specified, and MenuItem is being used inside Menu component, the tabId\r\nwill be set to \"tab-i\" where i is (zero indexed) position of tab in list\r\nitems pased to Menu component."
+        "description": "Optional identifier for MenuItem used for determining which MenuItem is visible\nif not specified, and MenuItem is being used inside Menu component, the tabId\nwill be set to \"tab-i\" where i is (zero indexed) position of tab in list\nitems pased to Menu component."
       },
       "disabled": {
         "type": {
@@ -3074,7 +3335,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -3088,7 +3349,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "children": {
         "type": {
@@ -3151,7 +3412,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   },
@@ -3165,7 +3426,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
+        "description": "The ID of this component, used to identify dash components\nin callbacks. The ID needs to be unique across all of the\ncomponents in an app."
       },
       "children": {
         "type": {
@@ -3217,268 +3478,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
-      }
-    }
-  },
-  "src/lib/components/UserCard.react.js": {
-    "description": "AdminLTE3 widget user card.",
-    "displayName": "UserCard",
-    "methods": [],
-    "props": {
-      "id": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
-      },
-      "children": {
-        "type": {
-          "name": "node"
-        },
-        "required": false,
-        "description": "Defines CSS styles which will override styles previously set."
-      },
-      "style": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": "Defines CSS styles which will override styles previously set."
-      },
-      "className": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Often used with CSS to style elements with common properties."
-      },
-      "type": {
-        "type": {
-          "name": "number"
-        },
-        "required": false,
-        "description": "User card type options 2 or NULL."
-      },
-      "src": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "User image url or path."
-      },
-      "elevation": {
-        "type": {
-          "name": "number"
-        },
-        "required": false,
-        "description": "User card elevation."
-      },
-      "image_elevation": {
-        "type": {
-          "name": "number"
-        },
-        "required": false,
-        "description": "User card image elevation (numeric)."
-      },
-      "color": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "A color for the user card, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
-      },
-      "title": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "User card title."
-      },
-      "subtitle": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Subtitle text."
-      },
-      "width": {
-        "type": {
-          "name": "number"
-        },
-        "required": false,
-        "description": "The width of the box, using the Bootstrap grid system. This is\r\nused for row-based layouts. The overall width of a region is 12, so the\r\ndefault width of 4 occupies 1/3 of that width. Default: 6.",
-        "defaultValue": {
-          "value": "6",
-          "computed": false
-        }
-      },
-      "loading_state": {
-        "type": {
-          "name": "shape",
-          "value": {
-            "is_loading": {
-              "name": "bool",
-              "description": "Determines if the component is loading or not",
-              "required": false
-            },
-            "prop_name": {
-              "name": "string",
-              "description": "Holds which property is loading",
-              "required": false
-            },
-            "component_name": {
-              "name": "string",
-              "description": "Holds the name of the component that is loading",
-              "required": false
-            }
-          }
-        },
-        "required": false,
-        "description": "Object that holds the loading state object coming from dash-renderer"
-      },
-      "setProps": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
-      }
-    }
-  },
-  "src/lib/components/ValueBox.react.js": {
-    "description": "Boostrap 4 value box.",
-    "displayName": "ValueBox",
-    "methods": [],
-    "props": {
-      "id": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "The ID of this component, used to identify dash components\r\nin callbacks. The ID needs to be unique across all of the\r\ncomponents in an app."
-      },
-      "style": {
-        "type": {
-          "name": "object"
-        },
-        "required": false,
-        "description": "Defines CSS styles which will override styles previously set."
-      },
-      "className": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Often used with CSS to style elements with common properties."
-      },
-      "value": {
-        "type": {
-          "name": "union",
-          "value": [
-            {
-              "name": "string"
-            },
-            {
-              "name": "number"
-            }
-          ]
-        },
-        "required": false,
-        "description": "The value to display in the box. Usually a number or short text."
-      },
-      "width": {
-        "type": {
-          "name": "number"
-        },
-        "required": false,
-        "description": "The width of the box, using the Bootstrap grid system. This is\r\nused for row-based layouts. The overall width of a region is 12, so the\r\ndefault width of 4 occupies 1/3 of that width. Default: 3.",
-        "defaultValue": {
-          "value": "3",
-          "computed": false
-        }
-      },
-      "color": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "A color for the value box, options: primary, secondary, success, info, warning, danger or NULL.\r\nDefault: NULL."
-      },
-      "icon": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "An icon tag. Default: user.",
-        "defaultValue": {
-          "value": "'user'",
-          "computed": false
-        }
-      },
-      "subtitle": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Subtitle text."
-      },
-      "href": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "An optional URL to link to."
-      },
-      "footer_text": {
-        "type": {
-          "name": "string"
-        },
-        "required": false,
-        "description": "Text displayed in footer.",
-        "defaultValue": {
-          "value": "'See more '",
-          "computed": false
-        }
-      },
-      "elevation": {
-        "type": {
-          "name": "number"
-        },
-        "required": false,
-        "description": "Box elevation."
-      },
-      "loading_state": {
-        "type": {
-          "name": "shape",
-          "value": {
-            "is_loading": {
-              "name": "bool",
-              "description": "Determines if the component is loading or not",
-              "required": false
-            },
-            "prop_name": {
-              "name": "string",
-              "description": "Holds which property is loading",
-              "required": false
-            },
-            "component_name": {
-              "name": "string",
-              "description": "Holds the name of the component that is loading",
-              "required": false
-            }
-          }
-        },
-        "required": false,
-        "description": "Object that holds the loading state object coming from dash-renderer"
-      },
-      "setProps": {
-        "type": {
-          "name": "func"
-        },
-        "required": false,
-        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+        "description": "Dash-assigned callback that should be called whenever any of the\nproperties change"
       }
     }
   }

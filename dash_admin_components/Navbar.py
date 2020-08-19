@@ -14,14 +14,14 @@ in callbacks. The ID needs to be unique across all of the
 components in an app.
 - className (string; optional): Often used with CSS to style elements with common properties.
 - text (string; optional): Text to display next to sidebar toogle.
-- skin (string; optional): Navbar skin, options dark or light. Default: light.
-- color (string; optional): A color for the navbar, options: primary, secondary, success, info, 
+- skin (string; default "light"): Navbar skin, options dark or light. Default: light.
+- color (string; default "white"): A color for the navbar, options: primary, secondary, success, info, 
 warning, danger, white or light-grey. Default: white.
-- border (boolean; optional): Whether to separate the navbar and body by a border. Default: True.
-- sidebar_icon (string; optional): Icon of the sidebar toggle. Default: bars.
-- controlbar_icon (string; optional): Icon to toggle the controlbar. Default: th.
-- fixed (boolean; optional): Whether the navbar is fixed to the top. Default: False.
-- loading_state (optional): Object that holds the loading state object coming from dash-renderer. loading_state has the following type: dict containing keys 'is_loading', 'prop_name', 'component_name'.
+- border (boolean; default True): Whether to separate the navbar and body by a border. Default: True.
+- sidebar_icon (string; default "bars"): Icon of the sidebar toggle. Default: bars.
+- controlbar_icon (string; default "th"): Icon to toggle the controlbar. Default: th.
+- fixed (boolean; default False): Whether the navbar is fixed to the top. Default: False.
+- loading_state (dict; optional): Object that holds the loading state object coming from dash-renderer. loading_state has the following type: dict containing keys 'is_loading', 'prop_name', 'component_name'.
 Those keys have the following types:
   - is_loading (boolean; optional): Determines if the component is loading or not
   - prop_name (string; optional): Holds which property is loading

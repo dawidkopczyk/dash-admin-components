@@ -4,7 +4,7 @@ from dash.development.base_component import Component, _explicitize_args
 
 
 class UserCard(Component):
-    """A UserCard component.
+    """An UserCard component.
 AdminLTE3 widget user card.
 
 Keyword arguments:
@@ -22,10 +22,10 @@ components in an app.
 Default: NULL.
 - title (string; optional): User card title.
 - subtitle (string; optional): Subtitle text.
-- width (number; optional): The width of the box, using the Bootstrap grid system. This is
+- width (number; default 6): The width of the box, using the Bootstrap grid system. This is
 used for row-based layouts. The overall width of a region is 12, so the
 default width of 4 occupies 1/3 of that width. Default: 6.
-- loading_state (optional): Object that holds the loading state object coming from dash-renderer. loading_state has the following type: dict containing keys 'is_loading', 'prop_name', 'component_name'.
+- loading_state (dict; optional): Object that holds the loading state object coming from dash-renderer. loading_state has the following type: dict containing keys 'is_loading', 'prop_name', 'component_name'.
 Those keys have the following types:
   - is_loading (boolean; optional): Determines if the component is loading or not
   - prop_name (string; optional): Holds which property is loading

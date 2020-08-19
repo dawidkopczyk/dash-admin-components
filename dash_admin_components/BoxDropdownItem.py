@@ -15,12 +15,12 @@ components in an app.
 - style (dict; optional): Defines CSS styles which will override styles previously set.
 - className (string; optional): Often used with CSS to style elements with common properties.
 - url (string; optional): Optional link.
-- n_clicks (number; optional): An integer that represents the number of times
+- n_clicks (number; default 0): An integer that represents the number of times
 that this element has been clicked on.
-- n_clicks_timestamp (number; optional): An integer that represents the time (in ms since 1970)
+- n_clicks_timestamp (number; default -1): An integer that represents the time (in ms since 1970)
 at which n_clicks changed. This can be used to tell
 which button was changed most recently.
-- loading_state (optional): Object that holds the loading state object coming from dash-renderer. loading_state has the following type: dict containing keys 'is_loading', 'prop_name', 'component_name'.
+- loading_state (dict; optional): Object that holds the loading state object coming from dash-renderer. loading_state has the following type: dict containing keys 'is_loading', 'prop_name', 'component_name'.
 Those keys have the following types:
   - is_loading (boolean; optional): Determines if the component is loading or not
   - prop_name (string; optional): Holds which property is loading

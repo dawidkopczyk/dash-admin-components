@@ -21,8 +21,8 @@ Default: NULL.
 if not specified, and MenuItem is being used inside Menu component, the tabId
 will be set to "tab-i" where i is (zero indexed) position of tab in list
 items pased to Menu component.
-- disabled (boolean; optional): Determines if tab is disabled or not - defaults to false
-- loading_state (optional): Object that holds the loading state object coming from dash-renderer. loading_state has the following type: dict containing keys 'is_loading', 'prop_name', 'component_name'.
+- disabled (boolean; default False): Determines if tab is disabled or not - defaults to false
+- loading_state (dict; optional): Object that holds the loading state object coming from dash-renderer. loading_state has the following type: dict containing keys 'is_loading', 'prop_name', 'component_name'.
 Those keys have the following types:
   - is_loading (boolean; optional): Determines if the component is loading or not
   - prop_name (string; optional): Holds which property is loading

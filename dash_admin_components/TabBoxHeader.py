@@ -14,14 +14,14 @@ in callbacks. The ID needs to be unique across all of the
 components in an app.
 - style (dict; optional): Defines CSS styles which will override styles previously set.
 - className (string; optional): Often used with CSS to style elements with common properties.
-- title (string; optional): Box title.
-- header_border (boolean; optional): Whether to display a border between the header and body. Default: True.
-- collapsible (boolean; optional): If True, display a button in the upper right that allows
+- title (string; default "\u200C"): Box title.
+- header_border (boolean; default True): Whether to display a border between the header and body. Default: True.
+- collapsible (boolean; default True): If True, display a button in the upper right that allows
 the user to collapse the box. Default: True.
 - collapsed (boolean; optional): Whether to start collapsed. Default: False.
-- closable (boolean; optional): If True, display a button in the upper right that allows the user to close the box.
+- closable (boolean; default False): If True, display a button in the upper right that allows the user to close the box.
 Default: False.
-- loading_state (optional): Object that holds the loading state object coming from dash-renderer. loading_state has the following type: dict containing keys 'is_loading', 'prop_name', 'component_name'.
+- loading_state (dict; optional): Object that holds the loading state object coming from dash-renderer. loading_state has the following type: dict containing keys 'is_loading', 'prop_name', 'component_name'.
 Those keys have the following types:
   - is_loading (boolean; optional): Determines if the component is loading or not
   - prop_name (string; optional): Holds which property is loading

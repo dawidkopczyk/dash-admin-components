@@ -4,7 +4,7 @@ from dash.development.base_component import Component, _explicitize_args
 
 
 class InfoBox(Component):
-    """A InfoBox component.
+    """An InfoBox component.
 Boostrap 4 info box.
 
 Keyword arguments:
@@ -14,11 +14,11 @@ in callbacks. The ID needs to be unique across all of the
 components in an app.
 - style (dict; optional): Defines CSS styles which will override styles previously set.
 - className (string; optional): Often used with CSS to style elements with common properties.
-- width (number; optional): The width of the box, using the Bootstrap grid system. This is
+- width (number; default 4): The width of the box, using the Bootstrap grid system. This is
 used for row-based layouts. The overall width of a region is 12, so the
 default width of 4 occupies 1/3 of that width. Default: 4.
 - title (string; optional): Box title.
-- icon (string; optional): An icon tag. Default: star.
+- icon (string; default 'star'): An icon tag. Default: star.
 - value (string | number; optional): The value to display in the box. Usually a number or short text.
 - color (string; optional): A color for the info box, options: primary, secondary, success, info, warning, danger or NULL.
 Default: NULL.
@@ -27,8 +27,8 @@ Default: NULL.
 - gradient_color (string; optional): A color for the box, options: primary, secondary, success, info, warning, danger or NULL.
 Default: NULL.
 - elevation (number; optional): Box elevation.
-- icon_elevation (number; optional): Icon elevation compared to the main content. Default: 3.
-- loading_state (optional): Object that holds the loading state object coming from dash-renderer. loading_state has the following type: dict containing keys 'is_loading', 'prop_name', 'component_name'.
+- icon_elevation (number; default 0): Icon elevation compared to the main content. Default: 3.
+- loading_state (dict; optional): Object that holds the loading state object coming from dash-renderer. loading_state has the following type: dict containing keys 'is_loading', 'prop_name', 'component_name'.
 Those keys have the following types:
   - is_loading (boolean; optional): Determines if the component is loading or not
   - prop_name (string; optional): Holds which property is loading
