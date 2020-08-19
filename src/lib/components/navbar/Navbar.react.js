@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
  * Create a Boostrap 4 dashboard navbar.
  */
 export default class Navbar extends Component {
-	
+
 	constructor(props) {
         super(props);
 	}
@@ -18,15 +18,15 @@ export default class Navbar extends Component {
 		this.$el = $(this.el);
 		this.$el.PushMenu();
 	}
-	
+
 	componentWillUnmount() {
 		this.$el.PushMenu('destroy');
 	}
-			
+
 	render() {
 		const {
-			children, 
-			className, 
+			children,
+			className,
 			text,
 			skin,
 			color,
@@ -34,13 +34,13 @@ export default class Navbar extends Component {
 			sidebar_icon,
 			controlbar_icon,
 			fixed,
-			loading_state, 
-			setProps, 
+			loading_state,
+			setProps,
 			...otherProps
 		} = this.props;
-		
+
 		return(
-			<nav 
+			<nav
 				className={classnames(
 					'main-header navbar navbar-expand',
 					color!=null ? `bg-${color}` : false,
@@ -50,7 +50,7 @@ export default class Navbar extends Component {
 					className,
 				)}
 				ref={el => this.el = el}
-				{...otherProps}         
+				{...otherProps}
 				data-dash-is-loading={
 					(loading_state && loading_state.is_loading) || undefined
 				}
@@ -59,26 +59,21 @@ export default class Navbar extends Component {
 					<li className="nav-item">
 						<a href="#" className="nav-link" data-widget="pushmenu">
 							<FontAwesomeIcon icon={sidebar_icon}/>
-						</a>					
+						</a>
 					</li>
 				</ul>
 				{text}
 				<ul className="navbar-nav ml-auto">
 				    {children}
-					<li className="nav-item">
-						<a id = "controlbar-toggle" href="#" className="nav-link" data-widget="control-sidebar" data-slide="true">
-							<FontAwesomeIcon icon={controlbar_icon}/>
-						</a>					
-					</li>
 				</ul>
 			</nav>
-		)              
-	} 
+		)
+	}
 }
-		
+
 Navbar.defaultProps = {
-	skin: "light", 
-	color: "white", 
+	skin: "light",
+	color: "white",
 	border: true,
     sidebar_icon: "bars",
     controlbar_icon: "th",
@@ -86,7 +81,7 @@ Navbar.defaultProps = {
 };
 
 Navbar.propTypes = {
-	
+
 	/**
 	* The ID of this component, used to identify dash components
 	* in callbacks. The ID needs to be unique across all of the
@@ -103,7 +98,7 @@ Navbar.propTypes = {
 	* Often used with CSS to style elements with common properties.
 	*/
 	className: PropTypes.string,
-	
+
 	/**
 	* Text to display next to sidebar toogle.
 	*/
@@ -115,11 +110,11 @@ Navbar.propTypes = {
 	skin: PropTypes.string,
 
 	/**
-	* A color for the navbar, options: primary, secondary, success, info, 
+	* A color for the navbar, options: primary, secondary, success, info,
 	* warning, danger, white or light-grey. Default: white.
 	*/
 	color: PropTypes.string,
-	
+
 	/**
 	* Whether to separate the navbar and body by a border. Default: True.
 	*/
@@ -134,12 +129,12 @@ Navbar.propTypes = {
 	* Icon to toggle the controlbar. Default: th.
 	*/
 	controlbar_icon: PropTypes.string,
-	
+
 	/**
 	* Whether the navbar is fixed to the top. Default: False.
 	*/
 	fixed: PropTypes.bool,
-	
+
 	/**
 	* Object that holds the loading state object coming from dash-renderer
 	*/
@@ -157,11 +152,11 @@ Navbar.propTypes = {
 		*/
 		component_name: PropTypes.string
 	}),
-	
+
     /**
      * Dash-assigned callback that should be called whenever any of the
      * properties change
      */
     setProps: PropTypes.func
-	
+
 };
