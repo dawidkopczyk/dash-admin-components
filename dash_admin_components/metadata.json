@@ -1789,7 +1789,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "A color for the navbar, options: primary, secondary, success, info, \nwarning, danger, white or light-grey. Default: white.",
+        "description": "A color for the navbar, options: primary, secondary, success, info,\nwarning, danger, white or light-grey. Default: white.",
         "defaultValue": {
           "value": "\"white\"",
           "computed": false

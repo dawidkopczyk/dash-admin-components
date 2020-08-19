@@ -15,7 +15,7 @@ components in an app.
 - className (string; optional): Often used with CSS to style elements with common properties.
 - text (string; optional): Text to display next to sidebar toogle.
 - skin (string; default "light"): Navbar skin, options dark or light. Default: light.
-- color (string; default "white"): A color for the navbar, options: primary, secondary, success, info, 
+- color (string; default "white"): A color for the navbar, options: primary, secondary, success, info,
 warning, danger, white or light-grey. Default: white.
 - border (boolean; default True): Whether to separate the navbar and body by a border. Default: True.
 - sidebar_icon (string; default "bars"): Icon of the sidebar toggle. Default: bars.
