@@ -7,10 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
  * Create a Boostrap 4 dashboard dropdown menu item.
  */
 export default class NavbarDropdownItem extends Component {
-	
+
 	constructor(props) {
         super(props);
-		
+
 		this.incrementClicks = this.incrementClicks.bind(this);
     }
 
@@ -22,55 +22,60 @@ export default class NavbarDropdownItem extends Component {
 			});
 		}
 	}
-	
+
 	render() {
 		const {
 			children,
-			className,			
+			className,
 			date,
 			icon,
-			loading_state, 
-			setProps, 
+			loading_state,
+			setProps,
 			...otherProps
 		} = this.props;
-		
+		var icon_tag, date_tag
+		if (icon) {
+			icon_tag=<FontAwesomeIcon icon={icon}/>
+		}
+		if (date) {
+			date_tag =<span className="float-right text-muted text-sm">
+							{date}
+							<span className="time">{icon_tag}</span>
+					</span>
+		}
+
 		return(
 			<React.Fragment>
-				<a 
+				<a
 					className={classnames(
 						'dropdown-item',
 						className
 					)}
-					{...otherProps}         
+					{...otherProps}
 					data-dash-is-loading={
 						(loading_state && loading_state.is_loading) || undefined
 					}
 				>
 					<span className="text-dark">
-						<FontAwesomeIcon icon={icon}/>
+						{icon_tag}
 						{children}
 					</span>
-					<span className="float-right text-muted text-sm">
-						{date}
-						<span className="time">
-							<FontAwesomeIcon icon={icon}/>
-						</span>						
-					</span>	
+					{date_tag}
 				</a>
 				<div className="dropdown-divider"></div>
 			</React.Fragment>
-		)              
-	} 
+		)
+	}
 }
-		
+
 NavbarDropdownItem.defaultProps = {
-	icon: 'info-circle',
+	icon: '',
 	n_clicks: 0,
 	n_clicks_timestamp: -1
 };
 
 NavbarDropdownItem.propTypes = {
-	
+
 	/**
 	* The ID of this component, used to identify dash components
 	* in callbacks. The ID needs to be unique across all of the
@@ -82,7 +87,7 @@ NavbarDropdownItem.propTypes = {
 	* The children of this component.
 	*/
 	children: PropTypes.node,
-	
+
 	/**
 	* Defines CSS styles which will override styles previously set.
 	*/
@@ -92,12 +97,12 @@ NavbarDropdownItem.propTypes = {
 	* Often used with CSS to style elements with common properties.
 	*/
 	className: PropTypes.string,
-	
+
 	/**
 	* A date to display in menu item.
 	*/
 	date: PropTypes.string,
-	
+
 	/**
 	* An icon tag. Default: info-circle.
 	*/
@@ -115,7 +120,7 @@ NavbarDropdownItem.propTypes = {
 	* which button was changed most recently.
 	*/
 	n_clicks_timestamp: PropTypes.number,
-	
+
 	/**
 	* Object that holds the loading state object coming from dash-renderer
 	*/
@@ -133,11 +138,11 @@ NavbarDropdownItem.propTypes = {
 		*/
 		component_name: PropTypes.string
 	}),
-	
+
     /**
      * Dash-assigned callback that should be called whenever any of the
      * properties change
      */
     setProps: PropTypes.func
-	
+
 };
