@@ -31,6 +31,7 @@ export default class NavbarDropdownItem extends Component {
 			icon,
 			loading_state,
 			setProps,
+			src,
 			...otherProps
 		} = this.props;
 		var icon_tag, date_tag
@@ -51,6 +52,8 @@ export default class NavbarDropdownItem extends Component {
 						'dropdown-item',
 						className
 					)}
+
+					src={src}
 					{...otherProps}
 					data-dash-is-loading={
 						(loading_state && loading_state.is_loading) || undefined

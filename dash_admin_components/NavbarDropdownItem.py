@@ -27,8 +27,8 @@ Those keys have the following types:
   - prop_name (string; optional): Holds which property is loading
   - component_name (string; optional): Holds the name of the component that is loading"""
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, style=Component.UNDEFINED, className=Component.UNDEFINED, date=Component.UNDEFINED, icon=Component.UNDEFINED, n_clicks=Component.UNDEFINED, n_clicks_timestamp=Component.UNDEFINED, loading_state=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'style', 'className', 'date', 'icon', 'n_clicks', 'n_clicks_timestamp', 'loading_state']
+    def __init__(self, children=None, id=Component.UNDEFINED, style=Component.UNDEFINED, className=Component.UNDEFINED, date=Component.UNDEFINED, icon=Component.UNDEFINED, n_clicks=Component.UNDEFINED, n_clicks_timestamp=Component.UNDEFINED, loading_state=Component.UNDEFINED, src=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'style', 'className', 'date', 'icon', 'n_clicks', 'n_clicks_timestamp', 'loading_state', 'src']
         self._type = 'NavbarDropdownItem'
         self._namespace = 'dash_admin_components'
         self._valid_wildcard_attributes =            []

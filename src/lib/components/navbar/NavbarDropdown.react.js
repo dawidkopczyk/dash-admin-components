@@ -53,7 +53,7 @@ export default class NavbarDropdown extends Component {
 			setProps,
 			...otherProps
 		} = this.props;
-		var footer_tag, menu_icon_tag
+		var footer_tag, menu_icon_tag, dropdown_divider_tag, header_text_tag
 		if (footer_text && footer_text !== '') {
 			footer_tag = <a className="dropdown-item dropdown-footer" href={src} target="_blank">
 				<span className="text-dark">
@@ -63,6 +63,10 @@ export default class NavbarDropdown extends Component {
 		}
 		if (menu_icon && menu_icon !== '') {
 			menu_icon_tag = <FontAwesomeIcon icon={menu_icon}/>
+		}
+		if (header_text) {
+			dropdown_divider_tag=<div className="dropdown-divider"></div>
+			header_text_tag=<span className="dropdown-item dropdown-header">{header_text}</span>
 		}
 		return (
 			<li
@@ -100,10 +104,8 @@ export default class NavbarDropdown extends Component {
 						this.dropdownMenu = element;
 					}}
 				>
-					<span className="dropdown-item dropdown-header">
-						{header_text}
-					</span>
-					<div className="dropdown-divider"></div>
+					{header_text_tag}
+					{dropdown_divider_tag}
 						{children}
 					{footer_tag}
 				</div>
