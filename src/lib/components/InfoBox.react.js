@@ -80,7 +80,7 @@ export default class InfoBox extends Component {
 InfoBox.defaultProps = {
 	icon: 'star',
   icon_elevation: 0,
-	width: 4
+	width: null
 };
 
 InfoBox.propTypes = {
