@@ -6,23 +6,23 @@ import classnames from 'classnames';
  * Create a Boostrap 4 tab item.
  */
 export default class TabItem extends Component {
-	
+
 	constructor(props) {
         super(props);
     }
-  
+
 	render() {
 		const {
-			children, 
+			children,
 			className,
-			active, 
-			loading_state, 
-			setProps, 
+			active,
+			loading_state,
+			setProps,
 			...otherProps
 		} = this.props;
-		
+
 		return(
-			<div 
+			<div
 				className={classnames(
 					'tab-pane container-fluid',
 					{'active': active},
@@ -33,19 +33,18 @@ export default class TabItem extends Component {
 					(loading_state && loading_state.is_loading) || undefined
 				}
 			>
-				<br></br>
 				{children}
 			</div>
-		)              
-	} 
+		)
+	}
 }
-		
+
 TabItem.defaultProps = {
 	active: false
 };
 
 TabItem.propTypes = {
-	
+
 	/**
 	* The ID of this component, used to identify dash components
 	* in callbacks. The ID needs to be unique across all of the
@@ -67,12 +66,12 @@ TabItem.propTypes = {
 	* Often used with CSS to style elements with common properties.
 	*/
 	className: PropTypes.string,
-	
+
 	/**
 	* Apply 'active' style to this component. Default: False.
 	*/
 	active: PropTypes.bool,
-	
+
 	/**
 	* Object that holds the loading state object coming from dash-renderer
 	*/
@@ -90,11 +89,11 @@ TabItem.propTypes = {
 		*/
 		component_name: PropTypes.string
 	}),
-	
+
     /**
      * Dash-assigned callback that should be called whenever any of the
      * properties change
      */
     setProps: PropTypes.func
-	
+
 };
