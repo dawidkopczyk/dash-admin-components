@@ -27,10 +27,15 @@ export default class InfoBox extends Component {
 			width,
 			loading_state,
 			setProps,
+			footer_text,
+			footer_link,
+			extra_field,
+			extra_field_icon,
+			extra_field_icon_color,
 			...otherProps
 		} = this.props;
 
-		var IconTag, ContentTag
+		var IconTag,ContentTag,ExtraFieldTag,FooterTag
 
 		IconTag = <span
 			className={classnames(
@@ -41,6 +46,18 @@ export default class InfoBox extends Component {
 		>
 			<FontAwesomeIcon icon={icon}/>
 		</span>
+		if (extra_field){
+			ExtraFieldTag =<span className="float-right infobox-extra-field">
+				<FontAwesomeIcon icon={extra_field_icon} color={extra_field_icon_color} size="lg"/>  {extra_field}
+			</span>
+		}
+		if (footer_text) {
+			if (footer_link) {
+				FooterTag = <a href={footer_link} target="_blank" className='small-box-footer infobox-view-more-link'>{footer_text}  <FontAwesomeIcon icon="angle-double-right"/></a>
+			} else {
+				FooterTag = <span className='small-box-footer infobox-view-more-link'>{footer_text}</span>
+			}
+		}
 
 		ContentTag = <div className="info-box-content">
 			<span className="info-box-text">
@@ -48,8 +65,10 @@ export default class InfoBox extends Component {
 			</span>
 			<span className="info-box-number">
 				{value}
+				{ExtraFieldTag}
 			</span>
 			{children}
+			{FooterTag}
 		</div>
 
 		return (
@@ -182,6 +201,30 @@ InfoBox.propTypes = {
      * Dash-assigned callback that should be called whenever any of the
      * properties change
      */
-    setProps: PropTypes.func
+		setProps: PropTypes.func,
+		/**
+		 * For Displaying Footer Text
+		 */
+		footer_text: PropTypes.string,
+
+		/**
+		 * For Footer Link  if this is available footertext will display as <a> tag
+		 */
+		footer_link: PropTypes.string,
+
+		/**
+		 * Add Extra Span Value After "Value" Field
+		 */
+		extra_field: PropTypes.string,
+
+		/**
+		 * Adds icon in Front of extra field value
+		 */
+		extra_field_icon: PropTypes.string,
+
+		/**
+		 * Extra field icon color
+		 */
+		extra_field_icon_color: PropTypes.string
 
 };
