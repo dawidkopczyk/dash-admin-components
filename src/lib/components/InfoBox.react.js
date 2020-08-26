@@ -32,6 +32,7 @@ export default class InfoBox extends Component {
 			extra_field,
 			extra_field_icon,
 			extra_field_icon_color,
+			main_div_className,
 			...otherProps
 		} = this.props;
 
@@ -73,7 +74,7 @@ export default class InfoBox extends Component {
 
 		return (
 			<div
-				className = {"col-sm-"+width}
+				className = {classnames( `col-sm-${width}`,`${main_div_className}`)}
 				data-dash-is-loading={
 					(loading_state && loading_state.is_loading) || undefined
 				}
@@ -225,6 +226,8 @@ InfoBox.propTypes = {
 		/**
 		 * Extra field icon color
 		 */
-		extra_field_icon_color: PropTypes.string
+		extra_field_icon_color: PropTypes.string,
+
+		main_div_className: PropTypes.string
 
 };

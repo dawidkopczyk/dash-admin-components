@@ -34,12 +34,12 @@ Those keys have the following types:
   - prop_name (string; optional): Holds which property is loading
   - component_name (string; optional): Holds the name of the component that is loading"""
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, style=Component.UNDEFINED, className=Component.UNDEFINED, width=Component.UNDEFINED, title=Component.UNDEFINED, icon=Component.UNDEFINED, value=Component.UNDEFINED, color=Component.UNDEFINED, icon_color=Component.UNDEFINED, gradient_color=Component.UNDEFINED, elevation=Component.UNDEFINED, icon_elevation=Component.UNDEFINED, loading_state=Component.UNDEFINED, footer_text=Component.UNDEFINED, footer_link=Component.UNDEFINED, extra_field=Component.UNDEFINED, extra_field_icon=Component.UNDEFINED, extra_field_icon_color=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'style', 'className', 'width', 'title', 'icon', 'value', 'color', 'icon_color', 'gradient_color', 'elevation', 'icon_elevation', 'loading_state', 'footer_text', 'footer_link', 'extra_field', 'extra_field_icon', 'extra_field_icon_color']
+    def __init__(self, children=None, id=Component.UNDEFINED, style=Component.UNDEFINED, className=Component.UNDEFINED, width=Component.UNDEFINED, title=Component.UNDEFINED, icon=Component.UNDEFINED, value=Component.UNDEFINED, color=Component.UNDEFINED, icon_color=Component.UNDEFINED, gradient_color=Component.UNDEFINED, elevation=Component.UNDEFINED, icon_elevation=Component.UNDEFINED, loading_state=Component.UNDEFINED, footer_text=Component.UNDEFINED, footer_link=Component.UNDEFINED, extra_field=Component.UNDEFINED, extra_field_icon=Component.UNDEFINED, extra_field_icon_color=Component.UNDEFINED, main_div_className=Component.UNDEFINED,**kwargs):
+        self._prop_names = ['children', 'id', 'style', 'className', 'width', 'title', 'icon', 'value', 'color', 'icon_color', 'gradient_color', 'elevation', 'icon_elevation', 'loading_state', 'footer_text', 'footer_link', 'extra_field', 'extra_field_icon', 'extra_field_icon_color', 'main_div_className']
         self._type = 'InfoBox'
         self._namespace = 'dash_admin_components'
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'style', 'className', 'width', 'title', 'icon', 'value', 'color', 'icon_color', 'gradient_color', 'elevation', 'icon_elevation', 'loading_state', 'footer_text', 'footer_link', 'extra_field', 'extra_field_icon', 'extra_field_icon_color']
+        self.available_properties = ['children', 'id', 'style', 'className', 'width', 'title', 'icon', 'value', 'color', 'icon_color', 'gradient_color', 'elevation', 'icon_elevation', 'loading_state', 'footer_text', 'footer_link', 'extra_field', 'extra_field_icon', 'extra_field_icon_color', 'main_div_className']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')
