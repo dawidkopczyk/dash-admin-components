@@ -53,7 +53,7 @@ export default class NavbarDropdownItem extends Component {
 						className
 					)}
 
-					src={src}
+					href={src}
 					{...otherProps}
 					data-dash-is-loading={
 						(loading_state && loading_state.is_loading) || undefined
